@@ -1,2691 +1,589 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0D0D0D" />
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Logo Design — Mohammad Aminzadeh</title>
+
+    <meta
+      name="description"
+      content="Selected logo design projects by Mohammad Aminzadeh."
+    />
+
+    <link
+      rel="canonical"
+      href="https://mohammadaminzaadeh.github.io/logos.html"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Logo Design — Mohammad Aminzadeh" />
+
+    <meta
+      property="og:description"
+      content="Selected logo design projects by Mohammad Aminzadeh."
+    />
+
+    <meta
+      property="og:url"
+      content="https://mohammadaminzaadeh.github.io/logos.html"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =========================
+       ROOT
+    ========================= */
+
+      :root {
+        --black: #0d0d0d;
+        --gold: #d4af37;
+        --white: #f7f7f4;
+        --text: #d5d5d0;
+        --muted: #9a9a95;
+        --line: rgba(247, 247, 244, 0.12);
+        --max-width: 1180px;
+        --en: "Playfair Display", Georgia, serif;
+        --fa: "Arad", Arial, sans-serif;
+      }
+
+      /* =========================
+       RESET
+    ========================= */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--black);
+        color: var(--white);
+        font-family: var(--en);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      /* =========================
+       LOCAL FONT
+    ========================= */
+
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("PlayfairDisplay-SemiBold.ttf") format("ttf");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
 
-  <title>Talentino | سامانه تعاملی کشف و پرورش استعداد</title>
+      /* =========================
+       HEADER
+    ========================= */
 
-  <meta
-    name="description"
-    content="Talentino یک سامانه تعاملی برای ساخت پروفایل چندبعدی علایق، پیشنهاد مسیر یادگیری، چالش و پیگیری پیشرفت دانش‌آموزان است."
-  />
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
 
-  <style>
-    /* =========================================================
-       TALENTINO v3 — Black & Gold
-       Single-file: HTML + CSS + JavaScript + LocalStorage
-    ========================================================== */
+        background: rgba(13, 13, 13, 0.88);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
 
-    :root {
-      --bg: #0D0D0D;
-      --surface: #151515;
-      --text: #F4F4F4;
-      --muted: #B3B3B3;
-      --line: rgba(255,255,255,.09);
-
-      --primary: #D4AF37;
-      --primary-rgb: 212, 175, 55;
-      --primary-light: #E7C85A;
-
-      --danger: #F08D8D;
-      --shadow: 0 25px 80px rgba(0,0,0,.35);
-      --radius: 24px;
-      --max: 1180px;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-
-    body {
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at 85% 5%, rgba(var(--primary-rgb), .08), transparent 30%),
-        radial-gradient(circle at 10% 50%, rgba(var(--primary-rgb), .04), transparent 28%),
-        var(--bg);
-      color: var(--text);
-      font-family: Vazirmatn, Tahoma, "Segoe UI", sans-serif;
-      line-height: 1.8;
-    }
-
-    button, input, textarea, select { font: inherit; }
-    button { border: 0; cursor: pointer; }
-    a { color: inherit; text-decoration: none; }
-
-    ::selection { background: var(--primary); color: var(--bg); }
-
-    .container { width: min(var(--max), calc(100% - 36px)); margin-inline: auto; }
-
-    /* Keyboard focus (accessibility) */
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible,
-    select:focus-visible {
-      outline: 2px solid var(--primary);
-      outline-offset: 2px;
-    }
-
-    /* ================= HEADER ================= */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      background: rgba(13,13,13,.85);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; letter-spacing: -.5px; }
-
-    .brand-mark {
-      width: 42px; height: 42px;
-      display: grid; place-items: center;
-      border-radius: 13px;
-      border: 1px solid rgba(var(--primary-rgb), .35);
-      background: rgba(var(--primary-rgb), .08);
-      color: var(--primary);
-      font-weight: 900;
-      font-size: 1.15rem;
-    }
-
-    .nav-links { display: flex; align-items: center; gap: 6px; }
-
-    .nav-links button {
-      background: transparent;
-      color: var(--muted);
-      padding: 9px 13px;
-      border-radius: 11px;
-      transition: .2s;
-    }
-
-    .nav-links button:hover { color: var(--primary); background: rgba(var(--primary-rgb), .08); }
-
-    .menu-toggle {
-      display: none;
-      width: 44px; height: 44px;
-      align-items: center; justify-content: center;
-      border-radius: 12px;
-      background: rgba(255,255,255,.05);
-      border: 1px solid var(--line);
-      color: var(--text);
-      font-size: 1.25rem;
-    }
-
-    /* ================= BUTTONS ================= */
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      min-height: 46px;
-      padding: 10px 18px;
-      border-radius: 13px;
-      font-weight: 800;
-      transition: transform .2s, background .2s, opacity .2s, border-color .2s;
-    }
-
-    .btn:hover:not(:disabled) { transform: translateY(-2px); }
-    .btn:disabled { opacity: .4; cursor: not-allowed; }
-
-    .btn-primary { background: var(--primary); color: #111; }
-    .btn-primary:hover:not(:disabled) { background: var(--primary-light); }
-
-    .btn-secondary {
-      background: transparent;
-      border: 1px solid rgba(var(--primary-rgb), .35);
-      color: var(--primary);
-    }
-
-    .btn-secondary:hover:not(:disabled) { background: rgba(var(--primary-rgb), .08); }
-
-    .btn-ghost {
-      background: rgba(255,255,255,.04);
-      border: 1px solid var(--line);
-      color: var(--muted);
-    }
-
-    .btn-danger {
-      background: rgba(217,101,101,.1);
-      border: 1px solid rgba(217,101,101,.28);
-      color: var(--danger);
-    }
-
-    .btn-small { min-height: 36px; padding: 5px 13px; font-size: .85rem; border-radius: 10px; }
-
-    /* ================= HERO ================= */
-
-    .hero { padding: 78px 0 55px; }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 12px;
-      border: 1px solid rgba(var(--primary-rgb), .3);
-      background: rgba(var(--primary-rgb), .06);
-      border-radius: 999px;
-      color: var(--primary);
-      font-size: .85rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.2rem, 6vw, 4.8rem);
-      line-height: 1.15;
-      letter-spacing: -2px;
-      margin-bottom: 22px;
-    }
-
-    .gold-text { color: var(--primary); }
-
-    .hero p { max-width: 680px; color: var(--muted); font-size: 1.05rem; margin-bottom: 28px; }
-
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-
-    .hero-card {
-      padding: 24px;
-      border: 1px solid var(--line);
-      background: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.015));
-      border-radius: 30px;
-      box-shadow: var(--shadow);
-    }
-
-    .profile-preview { display: grid; gap: 16px; }
-
-    .profile-preview-header { display: flex; justify-content: space-between; align-items: center; }
-
-    .profile-preview h3 { font-size: 1.1rem; }
-
-    .mini-score { font-size: 1.8rem; font-weight: 900; color: var(--primary); direction: ltr; }
-
-    .bar { height: 9px; overflow: hidden; border-radius: 999px; background: rgba(255,255,255,.07); }
-
-    .bar span {
-      display: block;
-      height: 100%;
-      border-radius: inherit;
-      background: var(--primary);
-      transition: width .5s ease;
-    }
-
-    .preview-row {
-      display: grid;
-      grid-template-columns: 95px 1fr 45px;
-      gap: 12px;
-      align-items: center;
-      font-size: .85rem;
-    }
-
-    .preview-row strong { text-align: left; direction: ltr; color: var(--primary); }
-
-    /* ================= SECTIONS ================= */
-
-    section { padding: 55px 0; }
-
-    .section-heading { margin-bottom: 28px; }
-    .section-heading h2 { font-size: clamp(1.7rem, 4vw, 2.7rem); margin-bottom: 8px; line-height: 1.3; }
-    .section-heading p { color: var(--muted); max-width: 750px; }
-
-    .grid { display: grid; gap: 18px; }
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-
-    .card {
-      background: rgba(255,255,255,.03);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 23px;
-    }
-
-    .feature-card { min-height: 190px; transition: transform .2s, border-color .2s; }
-    .feature-card:hover { transform: translateY(-4px); border-color: rgba(var(--primary-rgb), .35); }
-
-    .feature-icon {
-      width: 48px; height: 48px;
-      display: grid; place-items: center;
-      border-radius: 14px;
-      background: rgba(var(--primary-rgb), .08);
-      border: 1px solid rgba(var(--primary-rgb), .18);
-      font-size: 1.3rem;
-      margin-bottom: 16px;
-    }
-
-    .card h3 { margin-bottom: 7px; }
-    .card p { color: var(--muted); font-size: .92rem; }
-
-    /* ================= APP ================= */
-
-    #app { display: none; }
-    #app.open { display: block; }
-
-    .app-shell { min-height: 70vh; padding-top: 40px; }
-
-    .app-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 22px;
-      flex-wrap: wrap;
-    }
-
-    .app-top h2 { font-size: 1.8rem; }
-
-    .app-top-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-
-    .app-tabs {
-      display: flex;
-      gap: 7px;
-      flex-wrap: wrap;
-      margin-bottom: 25px;
-      padding: 7px;
-      border: 1px solid var(--line);
-      border-radius: 17px;
-      background: rgba(255,255,255,.02);
-    }
-
-    .app-tabs button {
-      flex: 1;
-      min-width: 120px;
-      padding: 10px;
-      border-radius: 12px;
-      background: transparent;
-      color: var(--muted);
-      transition: .2s;
-    }
-
-    .app-tabs button:hover { color: var(--text); }
-    .app-tabs button.active { background: rgba(var(--primary-rgb), .1); color: var(--primary); }
-
-    .app-panel { display: none; }
-    .app-panel.active { display: block; animation: fadeIn .3s ease; }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(7px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ================= ASSESSMENT ================= */
-
-    .assessment-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-
-    .progress-track {
-      height: 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.07);
-      overflow: hidden;
-      margin-bottom: 30px;
-    }
-
-    .progress-track span {
-      display: block;
-      height: 100%;
-      width: 0;
-      background: var(--primary);
-      transition: width .3s;
-    }
-
-    .question-card { max-width: 850px; margin: auto; }
-
-    .question-number { color: var(--primary); font-weight: 900; margin-bottom: 8px; }
-
-    .question-text {
-      font-size: clamp(1.3rem, 3vw, 2rem);
-      line-height: 1.6;
-      margin-bottom: 25px;
-    }
-
-    .options { display: grid; gap: 12px; }
-
-    .option {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      width: 100%;
-      text-align: right;
-      padding: 16px;
-      border-radius: 16px;
-      background: rgba(255,255,255,.03);
-      border: 1px solid var(--line);
-      color: var(--text);
-      transition: .2s;
-    }
-
-    .option:hover { border-color: rgba(var(--primary-rgb), .5); background: rgba(var(--primary-rgb), .06); }
-    .option.selected { border-color: var(--primary); background: rgba(var(--primary-rgb), .1); }
-
-    .option-mark {
-      width: 30px; height: 30px;
-      display: grid; place-items: center;
-      flex: 0 0 auto;
-      border: 1px solid var(--line);
-      border-radius: 9px;
-      color: var(--muted);
-    }
-
-    .option.selected .option-mark {
-      background: var(--primary);
-      color: #111;
-      border-color: var(--primary);
-      font-weight: 900;
-    }
-
-    .assessment-actions { display: flex; justify-content: space-between; gap: 12px; margin-top: 28px; }
-
-    .kbd-hint { color: var(--muted); font-size: .8rem; margin-top: 14px; text-align: center; }
-
-    /* ================= RESULT ================= */
-
-    .result-hero { display: grid; grid-template-columns: .8fr 1.2fr; gap: 25px; margin-bottom: 25px; }
-
-    .result-main {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .score-circle {
-      width: 180px; height: 180px;
-      border-radius: 50%;
-      display: grid; place-items: center;
-      position: relative;
-      background:
-        radial-gradient(circle at center, var(--surface) 57%, transparent 58%),
-        conic-gradient(var(--primary) var(--score), rgba(255,255,255,.08) 0);
-    }
-
-    .score-circle::before {
-      content: "";
-      position: absolute;
-      inset: 8px;
-      border-radius: inherit;
-      border: 1px solid var(--line);
-    }
-
-    .score-circle strong { font-size: 3rem; line-height: 1.2; color: var(--primary); }
-    .score-circle small { display: block; color: var(--muted); font-size: .8rem; }
-
-    .result-description { color: var(--muted); margin-top: 18px; max-width: 500px; }
-
-    .domain-list { display: grid; gap: 12px; }
-
-    .domain-row {
-      display: grid;
-      grid-template-columns: 175px 1fr 48px;
-      align-items: center;
-      gap: 12px;
-      font-size: .92rem;
-    }
-
-    .domain-row strong { text-align: left; direction: ltr; color: var(--primary); }
-    .domain-row .bar { height: 10px; }
-
-    .path-card { position: relative; overflow: hidden; }
-
-    .path-card::after {
-      content: "";
-      position: absolute;
-      width: 120px; height: 120px;
-      left: -55px; bottom: -55px;
-      border-radius: 50%;
-      background: rgba(var(--primary-rgb), .06);
-      pointer-events: none;
-    }
-
-    .path-level { color: var(--primary); font-size: .8rem; font-weight: 900; margin-bottom: 6px; }
-
-    .steps { margin-top: 16px; display: grid; gap: 8px; position: relative; z-index: 1; }
-
-    .step {
-      padding: 10px 12px;
-      border-radius: 11px;
-      background: rgba(255,255,255,.03);
-      color: var(--muted);
-      font-size: .88rem;
-    }
-
-    /* ================= CHALLENGES ================= */
-
-    .challenge-card { display: flex; flex-direction: column; min-height: 235px; }
-
-    .challenge-meta { display: flex; gap: 7px; flex-wrap: wrap; margin: 10px 0; }
-
-    .tag {
-      display: inline-block;
-      padding: 4px 9px;
-      border-radius: 999px;
-      background: rgba(var(--primary-rgb), .07);
-      border: 1px solid rgba(var(--primary-rgb), .18);
-      color: var(--primary);
-      font-size: .75rem;
-    }
-
-    .tag-accent {
-      background: rgba(var(--primary-rgb), .2);
-      border-color: rgba(var(--primary-rgb), .5);
-      color: var(--primary-light);
-      font-weight: 700;
-    }
-
-    .challenge-card .btn { margin-top: auto; }
-    .challenge-card p { margin-bottom: 16px; }
-
-    /* ================= PROJECTS ================= */
-
-    .project-form { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; margin-bottom: 22px; }
-
-    .field { display: grid; gap: 7px; }
-    .field.full { grid-column: 1 / -1; }
-    .field label { color: var(--muted); font-size: .85rem; }
-
-    .field input,
-    .field textarea,
-    .field select {
-      width: 100%;
-      border: 1px solid var(--line);
-      outline: none;
-      background: rgba(255,255,255,.03);
-      color: var(--text);
-      border-radius: 13px;
-      padding: 12px 13px;
-    }
-
-    .field select option { background: #1a1a1a; color: var(--text); }
-    .field textarea { min-height: 110px; resize: vertical; }
-
-    .field input:focus,
-    .field textarea:focus,
-    .field select:focus { border-color: var(--primary); background: rgba(var(--primary-rgb), .04); }
-
-    .project-list { display: grid; gap: 12px; }
-
-    .project-item {
-      padding: 17px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(255,255,255,.025);
-    }
-
-    .project-item-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      align-items: center;
-      margin-bottom: 8px;
-    }
-
-    /* ================= PROGRESS ================= */
-
-    .progress-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; margin-bottom: 22px; }
-
-    .stat { text-align: center; }
-    .stat strong { display: block; font-size: 2rem; color: var(--primary); }
-    .stat span { color: var(--muted); font-size: .85rem; }
-
-    .domain-progress-list { display: grid; gap: 14px; }
-
-    .domain-progress {
-      display: grid;
-      grid-template-columns: 175px 1fr 45px;
-      gap: 12px;
-      align-items: center;
-      font-size: .92rem;
-    }
-
-    .domain-progress strong { text-align: left; direction: ltr; color: var(--primary); }
-
-    /* ================= METHODOLOGY ================= */
-
-    .method-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .method-step { display: flex; gap: 14px; }
-
-    .method-number {
-      width: 42px; height: 42px;
-      flex: 0 0 auto;
-      display: grid; place-items: center;
-      border-radius: 12px;
-      background: rgba(var(--primary-rgb), .09);
-      color: var(--primary);
-      font-weight: 900;
-    }
-
-    .notice {
-      padding: 17px;
-      border-radius: 15px;
-      background: rgba(var(--primary-rgb), .05);
-      border: 1px solid rgba(var(--primary-rgb), .22);
-      color: #E8D9A5;
-      margin-top: 18px;
-      font-size: .9rem;
-    }
-
-    .insight { margin-top: 12px; color: #D5D5D5; font-size: .9rem; }
-
-    /* ================= FOOTER ================= */
-
-    footer { padding: 45px 0; border-top: 1px solid var(--line); color: var(--muted); margin-top: 30px; }
-    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-    .footer-brand { color: var(--primary); font-weight: 900; }
-
-    /* ================= TOAST ================= */
-
-    #toast {
-      position: fixed;
-      left: 22px; bottom: 22px;
-      z-index: 999;
-      max-width: min(380px, calc(100% - 44px));
-      padding: 13px 16px;
-      border: 1px solid rgba(var(--primary-rgb), .4);
-      border-radius: 14px;
-      background: #1c1c1c;
-      box-shadow: var(--shadow);
-      transform: translateY(130px);
-      opacity: 0;
-      transition: .3s;
-      pointer-events: none;
-    }
-
-    #toast.show { transform: translateY(0); opacity: 1; }
-
-    /* ================= RESPONSIVE ================= */
-
-    @media (max-width: 900px) {
-      .hero-grid, .result-hero { grid-template-columns: 1fr; }
-      .grid-3 { grid-template-columns: repeat(2, 1fr); }
-
-      .menu-toggle { display: inline-flex; }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0; left: 0;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 10px 18px 16px;
-        background: rgba(13,13,13,.98);
         border-bottom: 1px solid var(--line);
       }
 
-      .nav-links.open { display: flex; }
-      .nav-links button { text-align: right; padding: 12px 13px; }
+      .nav {
+        width: min(var(--max-width), calc(100% - 48px));
+        margin: 0 auto;
 
-      .progress-stats { grid-template-columns: repeat(2, 1fr); }
-    }
+        height: 82px;
 
-    @media (max-width: 650px) {
-      .container { width: min(var(--max), calc(100% - 24px)); }
-      .hero { padding-top: 45px; }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
 
-      .grid-3, .method-grid, .progress-stats, .project-form { grid-template-columns: 1fr; }
-      .field.full { grid-column: auto; }
+      .brand {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        letter-spacing: 0.02em;
+      }
 
-      .domain-row, .domain-progress { grid-template-columns: 125px 1fr 42px; font-size: .82rem; }
+      .brand span {
+        color: var(--gold);
+      }
 
-      .app-top, .assessment-top { align-items: flex-start; flex-direction: column; }
+      .back-home {
+        font-size: 13px;
+        color: var(--muted);
+        transition: color 0.3s ease;
+      }
 
-      .hero h1 { letter-spacing: -1px; }
-      .score-circle { width: 155px; height: 155px; }
-      .kbd-hint { display: none; }
-    }
+      .back-home:hover {
+        color: var(--gold);
+      }
 
-    @media (max-width: 480px) {
-      .nav > .btn-primary { display: none; }
-    }
+      /* =========================
+       MAIN
+    ========================= */
 
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-    }
-  </style>
-</head>
+      main {
+        width: min(var(--max-width), calc(100% - 48px));
+        margin: 0 auto;
+      }
 
-<body>
+      /* =========================
+       HERO
+    ========================= */
 
-  <!-- ===================== HEADER ===================== -->
+      .hero {
+        min-height: 62vh;
 
-  <header>
-    <div class="container nav">
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-      <a href="#" class="brand" aria-label="Talentino - صفحه اصلی" onclick="showHome(); return false;">
-        <span class="brand-mark">T</span>
-        <span>Talentino</span>
-      </a>
+        padding: 100px 0 90px;
 
-      <nav class="nav-links" id="navLinks" aria-label="منوی اصلی">
-        <button type="button" onclick="showHome()">خانه</button>
-        <button type="button" onclick="scrollToSection('about')">درباره سامانه</button>
-        <button type="button" onclick="openApp('assessment')">ارزیابی</button>
-        <button type="button" onclick="openApp('results')">پروفایل من</button>
-        <button type="button" onclick="openApp('progress')">پیشرفت</button>
+        border-bottom: 1px solid var(--line);
+      }
+
+      .eyebrow {
+        color: var(--gold);
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+
+        margin-bottom: 24px;
+      }
+
+      .hero h1 {
+        max-width: 900px;
+
+        font-family: "Playfair Display", serif;
+        font-size: clamp(58px, 9vw, 118px);
+        font-weight: 400;
+        line-height: 0.95;
+        letter-spacing: -0.045em;
+      }
+
+      .hero h1 span {
+        color: var(--gold);
+      }
+
+      .hero-description {
+        max-width: 620px;
+
+        margin-top: 34px;
+
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.9;
+      }
+
+      /* =========================
+       PROJECTS
+    ========================= */
+
+      .projects {
+        padding: 110px 0 120px;
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
+        margin-bottom: 48px;
+      }
+
+      .section-heading h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 38px;
+        font-weight: 400;
+      }
+
+      .section-number {
+        color: var(--muted);
+        font-size: 12px;
+        letter-spacing: 0.12em;
+      }
+
+      /* =========================
+       PROJECT GRID
+    ========================= */
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+      }
+
+      .project-card {
+        display: block;
+
+        border: 1px solid var(--line);
+        background: #111111;
+
+        overflow: hidden;
+
+        transition:
+          transform 0.4s ease,
+          border-color 0.4s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(212, 175, 55, 0.5);
+      }
+
+      /* =========================
+       PROJECT IMAGE
+    ========================= */
+
+      .project-image {
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+        background: #161616;
+      }
+
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* =========================
+       PROJECT INFO
+    ========================= */
+
+      .project-info {
+        padding: 26px 28px 30px;
+      }
+
+      .project-category {
+        color: var(--gold);
+
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+
+        margin-bottom: 10px;
+      }
+
+      .project-info h3 {
+        font-family: "Playfair Display", serif;
+
+        font-size: 30px;
+        font-weight: 400;
+
+        margin-bottom: 10px;
+      }
+
+      .project-info p {
+        max-width: 500px;
+
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .view-project {
+        display: inline-block;
+
+        margin-top: 22px;
+
+        color: var(--white);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+
+        transition: color 0.3s ease;
+      }
+
+      .project-card:hover .view-project {
+        color: var(--gold);
+      }
+
+      /* =========================
+       FOOTER NAVIGATION
+    ========================= */
+
+      .bottom-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 34px 0;
+
+        border-top: 1px solid var(--line);
+      }
+
+      .bottom-navigation a {
+        color: var(--muted);
+        font-size: 13px;
+
+        transition: color 0.3s ease;
+      }
+
+      .bottom-navigation a:hover {
+        color: var(--gold);
+      }
+
+      /* =========================
+       FOOTER
+    ========================= */
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 34px 0 42px;
+      }
+
+      .footer-inner {
+        width: min(var(--max-width), calc(100% - 48px));
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-name {
+        font-family: "Playfair Display", serif;
+        font-size: 16px;
+      }
+
+      .footer-copy {
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      /* =========================
+       RESPONSIVE
+    ========================= */
+
+      @media (max-width: 750px) {
+        .nav {
+          width: min(var(--max-width), calc(100% - 32px));
+          height: 72px;
+        }
+
+        main {
+          width: min(var(--max-width), calc(100% - 32px));
+        }
+
+        .hero {
+          min-height: 60vh;
+          padding: 80px 0 70px;
+        }
+
+        .hero h1 {
+          font-size: clamp(54px, 17vw, 82px);
+        }
+
+        .hero-description {
+          font-size: 14px;
+          line-height: 1.8;
+        }
+
+        .projects {
+          padding: 80px 0 90px;
+        }
+
+        .section-heading {
+          margin-bottom: 30px;
+        }
+
+        .section-heading h2 {
+          font-size: 30px;
+        }
+
+        .project-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .project-info {
+          padding: 22px 22px 26px;
+        }
+
+        .project-info h3 {
+          font-size: 27px;
+        }
+
+        .footer-inner {
+          width: min(var(--max-width), calc(100% - 32px));
+
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- =========================
+       HEADER
+  ========================= -->
+
+    <header>
+      <nav class="nav">
+        <a href="index.html" class="brand"> Mohammad <span>Aminzadeh</span> </a>
+
+        <a href="index.html#work" class="back-home"> ← Back to Work </a>
       </nav>
+    </header>
 
-      <button
-        type="button"
-        class="menu-toggle"
-        id="menuToggle"
-        aria-label="باز و بسته کردن منو"
-        aria-expanded="false"
-        aria-controls="navLinks"
-        onclick="toggleMenu()"
-      >☰</button>
-
-      <button type="button" class="btn btn-primary" onclick="openApp('assessment')">
-        شروع ارزیابی
-      </button>
-
-    </div>
-  </header>
-
-
-  <main id="home">
-
-    <!-- ===================== LANDING (صفحه معرفی) ===================== -->
-
-    <div id="landing">
+    <main>
+      <!-- =========================
+         HERO
+    ========================= -->
 
       <section class="hero">
-        <div class="container hero-grid">
+        <div class="eyebrow">Selected Work</div>
 
-          <div>
-            <span class="eyebrow">● سامانه تعاملی کشف و پرورش استعداد</span>
+        <h1>Logo Design</h1>
 
-            <h1>
-              استعدادت را
-              <span class="gold-text">کشف کن.</span>
-              <br />
-              مسیرت را
-              <span class="gold-text">بساز.</span>
-            </h1>
+        <p class="hero-description">
+          A selection of minimal and distinctive logo concepts created for
+          brands, digital businesses and creative directions.
+        </p>
+      </section>
 
-            <p>
-              Talentino با تحلیل پاسخ‌های دانش‌آموز، یک پروفایل چندبعدی از
-              گرایش‌ها و علایق او ایجاد می‌کند و سپس مسیرهای یادگیری،
-              چالش‌ها و پروژه‌های متناسب پیشنهاد می‌دهد.
-            </p>
+      <!-- =========================
+         PROJECTS
+    ========================= -->
 
-            <div class="hero-actions">
-              <button type="button" class="btn btn-primary" onclick="openApp('assessment')">
-                شروع کشف استعداد ←
-              </button>
+      <section class="projects">
+        <div class="section-heading">
+          <h2>Selected Projects</h2>
 
-              <button type="button" class="btn btn-secondary" onclick="scrollToSection('about')">
-                روش کار سامانه
-              </button>
+          <div class="section-number">03 Projects</div>
+        </div>
+
+        <div class="project-grid">
+          <!-- SURIN -->
+
+          <a href="work-surin.html" class="project-card">
+            <div class="project-image">
+              <img
+                src="images/surin-hero.jpg"
+                alt="SURIN logo design"
+                loading="lazy"
+              />
             </div>
-          </div>
 
+            <div class="project-info">
+              <div class="project-category">01 · Logo Design</div>
 
-          <div class="hero-card">
-            <div class="profile-preview">
+              <h3>SURIN</h3>
 
-              <div class="profile-preview-header">
-                <div>
-                  <small style="color:var(--muted)">نمونه پروفایل چندبعدی (تصویری)</small>
-                  <h3>پروفایل علایق</h3>
-                </div>
-                <div class="mini-score">86%</div>
-              </div>
+              <p>
+                A minimal natural identity concept focused on simplicity,
+                organic forms and a refined visual character.
+              </p>
 
-              <div class="preview-row">
-                <span>فناوری</span>
-                <div class="bar"><span style="width:86%"></span></div>
-                <strong>86</strong>
-              </div>
-
-              <div class="preview-row">
-                <span>حل مسئله</span>
-                <div class="bar"><span style="width:82%"></span></div>
-                <strong>82</strong>
-              </div>
-
-              <div class="preview-row">
-                <span>طراحی</span>
-                <div class="bar"><span style="width:74%"></span></div>
-                <strong>74</strong>
-              </div>
-
-              <div class="preview-row">
-                <span>موسیقی</span>
-                <div class="bar"><span style="width:68%"></span></div>
-                <strong>68</strong>
-              </div>
-
-              <div class="preview-row">
-                <span>ارتباطات</span>
-                <div class="bar"><span style="width:61%"></span></div>
-                <strong>61</strong>
-              </div>
-
-              <div class="notice" style="margin-top:5px">
-                پروفایل، یک ارزیابی اولیه برای خودشناسی و انتخاب مسیر یادگیری است؛
-                تشخیص علمی یا قطعی استعداد نیست.
-              </div>
-
+              <span class="view-project"> View Case Study → </span>
             </div>
-          </div>
+          </a>
 
+          <!-- NOVA -->
+
+          <a href="work-nova.html" class="project-card">
+            <div class="project-image">
+              <img
+                src="images/nova-hero.jpg"
+                alt="NOVA logo design"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-info">
+              <div class="project-category">02 · Logo Design</div>
+
+              <h3>NOVA</h3>
+
+              <p>
+                A contemporary technology brand concept designed around clarity,
+                simplicity and digital products.
+              </p>
+
+              <span class="view-project"> View Case Study → </span>
+            </div>
+          </a>
+
+          <!-- PAYDAR -->
+
+          <a href="work-paydar.html" class="project-card">
+            <div class="project-image">
+              <img
+                src="images/paydar-hero.jpg"
+                alt="PAYDAR logo design"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-info">
+              <div class="project-category">03 · Logo Design</div>
+
+              <h3>PAYDAR</h3>
+
+              <p>
+                A geometric identity concept exploring stability, structure and
+                continuity for a real estate direction.
+              </p>
+
+              <span class="view-project"> View Case Study → </span>
+            </div>
+          </a>
         </div>
       </section>
 
+      <!-- =========================
+         BOTTOM NAVIGATION
+    ========================= -->
 
-      <section id="about">
-        <div class="container">
+      <div class="bottom-navigation">
+        <a href="index.html#work"> ← Back to Work </a>
 
-          <div class="section-heading">
-            <span class="eyebrow">از کشف تا عمل</span>
-            <h2>Talentino فقط یک آزمون نیست.</h2>
-            <p>هدف سامانه این است که نتیجه ارزیابی به یک مسیر عملی برای رشد تبدیل شود.</p>
-          </div>
-
-          <div class="grid grid-3">
-
-            <article class="card feature-card">
-              <div class="feature-icon" aria-hidden="true">🧭</div>
-              <h3>کشف چندبعدی</h3>
-              <p>بررسی هم‌زمان حوزه‌های متنوع به جای محدود کردن دانش‌آموز به چند استعداد ثابت.</p>
-            </article>
-
-            <article class="card feature-card">
-              <div class="feature-icon" aria-hidden="true">📊</div>
-              <h3>تحلیل قابل توضیح</h3>
-              <p>امتیاز هر حوزه از پاسخ‌های مشخص ساخته می‌شود و روش محاسبه قابل مشاهده است.</p>
-            </article>
-
-            <article class="card feature-card">
-              <div class="feature-icon" aria-hidden="true">🛤️</div>
-              <h3>مسیر شخصی‌سازی‌شده</h3>
-              <p>نتیجه فقط یک عدد نیست؛ سامانه برای حوزه‌های برجسته مسیر یادگیری پیشنهاد می‌دهد.</p>
-            </article>
-
-            <article class="card feature-card">
-              <div class="feature-icon" aria-hidden="true">🎯</div>
-              <h3>چالش‌های عملی</h3>
-              <p>دانش‌آموز می‌تواند آموخته‌های خود را با فعالیت‌ها و پروژه‌های واقعی آزمایش کند.</p>
-            </article>
-
-            <article class="card feature-card">
-              <div class="feature-icon" aria-hidden="true">📁</div>
-              <h3>ثبت پروژه</h3>
-              <p>پروژه‌های شخصی در سامانه ثبت می‌شوند تا مسیر رشد دانش‌آموز قابل مشاهده باشد.</p>
-            </article>
-
-            <article class="card feature-card">
-              <div class="feature-icon" aria-hidden="true">📈</div>
-              <h3>پیگیری پیشرفت</h3>
-              <p>داده‌ها فقط در مرورگر خودت ذخیره می‌شوند و روند رشدت را می‌توانی دنبال کنی.</p>
-            </article>
-
-          </div>
-        </div>
-      </section>
-
-    </div>
-
-
-    <!-- ===================== APP (پنل برنامه) ===================== -->
-
-    <section id="app" class="app-shell">
-      <div class="container">
-
-        <div class="app-top">
-          <div>
-            <span class="eyebrow">پنل Talentino</span>
-            <h2 id="appTitle">ارزیابی اولیه</h2>
-          </div>
-
-          <div class="app-top-actions">
-            <button type="button" class="btn btn-ghost" onclick="showHome()">
-              → بازگشت به صفحه اصلی
-            </button>
-            <button type="button" class="btn btn-danger" onclick="resetAll()">
-              پاک‌سازی اطلاعات
-            </button>
-          </div>
-        </div>
-
-
-        <div class="app-tabs" role="tablist" aria-label="بخش‌های پنل">
-          <button type="button" role="tab" id="tab-assessment" onclick="switchPanel('assessment')">🧭 ارزیابی</button>
-          <button type="button" role="tab" id="tab-results" onclick="switchPanel('results')">📊 پروفایل</button>
-          <button type="button" role="tab" id="tab-paths" onclick="switchPanel('paths')">🛤️ مسیرها</button>
-          <button type="button" role="tab" id="tab-challenges" onclick="switchPanel('challenges')">🎯 چالش‌ها</button>
-          <button type="button" role="tab" id="tab-projects" onclick="switchPanel('projects')">📁 پروژه‌ها</button>
-          <button type="button" role="tab" id="tab-progress" onclick="switchPanel('progress')">📈 پیشرفت</button>
-          <button type="button" role="tab" id="tab-method" onclick="switchPanel('method')">🔬 روش‌شناسی</button>
-        </div>
-
-
-        <!-- ============ ASSESSMENT PANEL ============ -->
-
-        <div id="panel-assessment" class="app-panel" role="tabpanel">
-
-          <div id="assessmentStart" class="card" style="max-width:850px;margin:auto">
-
-            <span class="eyebrow">شروع</span>
-
-            <h2 style="margin-bottom:10px">آماده‌ای پروفایل خودت را بسازی؟</h2>
-
-            <p style="color:var(--muted);margin-bottom:20px">
-              این ارزیابی شامل مجموعه‌ای از موقعیت‌ها و فعالیت‌های مختلف است.
-              پاسخ درست یا غلط وجود ندارد؛ پاسخ واقعی خودت را انتخاب کن.
-              پاسخ‌هایت خودکار ذخیره می‌شوند و هر زمان می‌توانی ادامه بدهی.
-            </p>
-
-            <div class="grid grid-3" style="margin-bottom:22px">
-              <div class="card">
-                <strong id="infoDomains">—</strong>
-                <p>پروفایل چندبعدی</p>
-              </div>
-              <div class="card">
-                <strong id="infoQuestions">—</strong>
-                <p>سه شاخص برای هر حوزه</p>
-              </div>
-              <div class="card">
-                <strong>۵ سطح پاسخ</strong>
-                <p>از «اصلاً شبیه من نیست» تا «کاملاً شبیه من است»</p>
-              </div>
-            </div>
-
-            <p id="startNote" style="color:var(--muted);margin-bottom:16px;font-size:.9rem"></p>
-
-            <div id="startActions" class="hero-actions"></div>
-
-          </div>
-
-
-          <div id="assessmentQuiz" style="display:none">
-
-            <div class="assessment-top">
-              <div>
-                <strong id="questionCounter">—</strong>
-                <div style="color:var(--muted);font-size:.85rem">
-                  پاسخ خودت را بر اساس علاقه و رفتار واقعی انتخاب کن.
-                </div>
-              </div>
-
-              <span id="questionDomain" class="tag">حوزه</span>
-            </div>
-
-            <div
-              class="progress-track"
-              role="progressbar"
-              id="progressBarWrap"
-              aria-label="پیشرفت ارزیابی"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              aria-valuenow="0"
-            >
-              <span id="assessmentProgress"></span>
-            </div>
-
-            <div class="card question-card">
-
-              <div class="question-number" id="questionNumber">پرسش ۱</div>
-              <div class="question-text" id="questionText">...</div>
-
-              <div class="options" id="optionsContainer" role="group" aria-label="گزینه‌های پاسخ"></div>
-
-              <div class="assessment-actions">
-                <button type="button" id="prevQuestionBtn" class="btn btn-ghost" onclick="previousQuestion()">
-                  ← قبلی
-                </button>
-
-                <button type="button" id="nextQuestionBtn" class="btn btn-primary" onclick="nextQuestion()">
-                  بعدی →
-                </button>
-              </div>
-
-              <div class="kbd-hint">
-                میان‌بر: کلیدهای ۱ تا ۵ برای پاسخ، فلش چپ برای بعدی، فلش راست برای قبلی
-              </div>
-
-            </div>
-          </div>
-
-
-          <div id="assessmentComplete" style="display:none" class="card">
-            <span class="eyebrow">تحلیل کامل شد</span>
-
-            <h2>پروفایل اولیه تو آماده است 🎉</h2>
-
-            <p style="color:var(--muted);margin:12px 0 20px">
-              سامانه پاسخ‌ها را بر اساس الگوریتم امتیازدهی چندبعدی تحلیل کرده است.
-            </p>
-
-            <button type="button" class="btn btn-primary" onclick="switchPanel('results')">
-              مشاهده پروفایل
-            </button>
-          </div>
-
-        </div>
-
-
-        <!-- ============ RESULTS PANEL ============ -->
-
-        <div id="panel-results" class="app-panel" role="tabpanel">
-
-          <div id="noResults" class="card">
-            <h3>هنوز پروفایلی ساخته نشده است.</h3>
-            <p style="color:var(--muted);margin:8px 0 18px">
-              ابتدا ارزیابی را کامل کن تا تحلیل نمایش داده شود.
-            </p>
-            <button type="button" class="btn btn-primary" onclick="switchPanel('assessment')">
-              شروع ارزیابی
-            </button>
-          </div>
-
-
-          <div id="resultsContent" style="display:none">
-
-            <div class="result-hero">
-
-              <div class="card result-main">
-
-                <div class="score-circle" id="overallCircle" style="--score:0%">
-                  <div>
-                    <strong id="overallScore">۰</strong>
-                    <small>میانگین کلی پاسخ‌ها</small>
-                  </div>
-                </div>
-
-                <p id="resultSummary" class="result-description"></p>
-                <div id="resultInsights" class="insight"></div>
-
-              </div>
-
-
-              <div class="card">
-
-                <div class="section-heading" style="margin-bottom:18px">
-                  <h2 style="font-size:1.45rem">نقشه علایق</h2>
-                  <p>رتبه‌بندی بر اساس امتیاز حوزه‌ها در همین ارزیابی.</p>
-                </div>
-
-                <div id="domainResults" class="domain-list"></div>
-
-              </div>
-
-            </div>
-
-
-            <div class="grid grid-3">
-
-              <div class="card">
-                <span class="tag">حوزه برجسته اول</span>
-                <h3 id="topDomain1" style="margin-top:10px">—</h3>
-                <p id="topDomain1Desc">—</p>
-              </div>
-
-              <div class="card">
-                <span class="tag">حوزه برجسته دوم</span>
-                <h3 id="topDomain2" style="margin-top:10px">—</h3>
-                <p id="topDomain2Desc">—</p>
-              </div>
-
-              <div class="card">
-                <span class="tag">حوزه برجسته سوم</span>
-                <h3 id="topDomain3" style="margin-top:10px">—</h3>
-                <p id="topDomain3Desc">—</p>
-              </div>
-
-            </div>
-
-
-            <div class="notice">
-              <strong>نکته علمی:</strong>
-              این سامانه بر اساس یک مدل امتیازدهی ساده طراحی شده و نتیجه آن
-              «تشخیص قطعی استعداد» یا آزمون روان‌شناختی استاندارد نیست؛
-              علاقه اعلام‌شده همان توانایی نیست.
-              برای اعتبار علمی بیشتر، نسخه پژوهشی باید با نمونه آماری مناسب،
-              نظر متخصصان و آزمون‌های معتبر اعتبارسنجی شود.
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- ============ PATHS PANEL ============ -->
-
-        <div id="panel-paths" class="app-panel" role="tabpanel">
-
-          <div class="section-heading">
-            <h2>مسیرهای پیشنهادی رشد</h2>
-            <p>مسیرها بر اساس حوزه‌هایی که در پروفایل تو امتیاز بالاتری گرفته‌اند مرتب می‌شوند.</p>
-          </div>
-
-          <div id="pathsContainer" class="grid grid-3"></div>
-
-        </div>
-
-
-        <!-- ============ CHALLENGES PANEL ============ -->
-
-        <div id="panel-challenges" class="app-panel" role="tabpanel">
-
-          <div class="section-heading">
-            <h2>چالش‌های عملی</h2>
-            <p>برای تبدیل علاقه به مهارت، باید چیزی بسازی، آزمایش کنی و نتیجه بگیری.</p>
-          </div>
-
-          <div id="challengesContainer" class="grid grid-3"></div>
-
-        </div>
-
-
-        <!-- ============ PROJECTS PANEL ============ -->
-
-        <div id="panel-projects" class="app-panel" role="tabpanel">
-
-          <div class="section-heading">
-            <h2>دفتر پروژه</h2>
-            <p>پروژه‌های واقعی خودت را ثبت کن تا مسیر رشدت قابل مشاهده باشد.</p>
-          </div>
-
-          <div class="card">
-
-            <form class="project-form" onsubmit="addProject(event)">
-
-              <div class="field">
-                <label for="projectTitle">نام پروژه</label>
-                <input id="projectTitle" required maxlength="80" placeholder="مثلاً وب‌سایت شخصی" />
-              </div>
-
-              <div class="field">
-                <label for="projectDomain">حوزه</label>
-                <select id="projectDomain" required></select>
-              </div>
-
-              <div class="field full">
-                <label for="projectDescription">توضیح پروژه</label>
-                <textarea
-                  id="projectDescription"
-                  required
-                  maxlength="500"
-                  placeholder="این پروژه چه چیزی را حل می‌کند؟ چه چیزی ساخته‌ای؟"
-                ></textarea>
-              </div>
-
-              <div>
-                <button class="btn btn-primary" type="submit">+ ثبت پروژه</button>
-              </div>
-
-            </form>
-
-            <div id="projectList" class="project-list"></div>
-
-          </div>
-
-        </div>
-
-
-        <!-- ============ PROGRESS PANEL ============ -->
-
-        <div id="panel-progress" class="app-panel" role="tabpanel">
-
-          <div class="section-heading">
-            <h2>داشبورد پیشرفت</h2>
-            <p>این بخش نشان می‌دهد از زمان شروع سامانه چه فعالیت‌هایی انجام داده‌ای.</p>
-          </div>
-
-          <div class="progress-stats">
-
-            <div class="card stat">
-              <strong id="statQuestions">۰</strong>
-              <span>پاسخ ثبت‌شده</span>
-            </div>
-
-            <div class="card stat">
-              <strong id="statProjects">۰</strong>
-              <span>پروژه ثبت‌شده</span>
-            </div>
-
-            <div class="card stat">
-              <strong id="statChallenges">۰</strong>
-              <span>چالش تکمیل‌شده</span>
-            </div>
-
-            <div class="card stat">
-              <strong id="statScore">۰</strong>
-              <span>میانگین کلی پاسخ‌ها</span>
-            </div>
-
-          </div>
-
-          <div class="card">
-            <h3 style="margin-bottom:18px">وضعیت حوزه‌ها</h3>
-            <div id="progressDomains" class="domain-progress-list"></div>
-          </div>
-
-        </div>
-
-
-        <!-- ============ METHODOLOGY PANEL ============ -->
-
-        <div id="panel-method" class="app-panel" role="tabpanel">
-
-          <div class="section-heading">
-            <span class="eyebrow">روش‌شناسی</span>
-            <h2>Talentino چگونه تصمیم می‌گیرد؟</h2>
-            <p>هدف طراحی الگوریتم، قابل توضیح بودن نتیجه است؛ نه تولید یک عدد جادویی.</p>
-          </div>
-
-          <div class="method-grid">
-
-            <div class="card method-step">
-              <div class="method-number">۱</div>
-              <div>
-                <h3>جمع‌آوری پاسخ</h3>
-                <p>کاربر برای هر موقعیت، شدت علاقه یا شباهت رفتاری خود را از ۱ تا ۵ مشخص می‌کند.</p>
-              </div>
-            </div>
-
-            <div class="card method-step">
-              <div class="method-number">۲</div>
-              <div>
-                <h3>اتصال پاسخ به حوزه</h3>
-                <p>هر سؤال به یک حوزه مشخص متصل است و هر حوزه دقیقاً سه سؤال دارد تا امتیازها قابل مقایسه باشند.</p>
-              </div>
-            </div>
-
-            <div class="card method-step">
-              <div class="method-number">۳</div>
-              <div>
-                <h3>محاسبه امتیاز</h3>
-                <p>میانگین پاسخ‌های هر حوزه محاسبه و با فرمول ((میانگین − ۱) ÷ ۴) × ۱۰۰ به مقیاس ۰ تا ۱۰۰ تبدیل می‌شود.</p>
-              </div>
-            </div>
-
-            <div class="card method-step">
-              <div class="method-number">۴</div>
-              <div>
-                <h3>رتبه‌بندی و شکستن تساوی</h3>
-                <p>حوزه‌ها بر اساس امتیاز مرتب می‌شوند. در تساوی، اول تعداد پاسخ‌های ۴ و ۵، بعد بیشترین پاسخ منفرد و در نهایت ترتیب ثابت حوزه‌ها ملاک است.</p>
-              </div>
-            </div>
-
-            <div class="card method-step">
-              <div class="method-number">۵</div>
-              <div>
-                <h3>تولید مسیر</h3>
-                <p>حوزه‌های برجسته به مسیرهای یادگیری مشخص و چالش‌های عملی متصل می‌شوند.</p>
-              </div>
-            </div>
-
-            <div class="card method-step">
-              <div class="method-number">۶</div>
-              <div>
-                <h3>چرخه رشد</h3>
-                <p>دانش‌آموز مسیر را به فعالیت و پروژه تبدیل می‌کند و پیشرفت خود را ثبت می‌کند.</p>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="notice">
-            <strong>محدودیت‌های شناخته‌شده:</strong>
-            همه پرسش‌ها به شکل مثبت نوشته شده‌اند، بنابراین کسی که به همه گزینه‌ها امتیاز بالا بدهد
-            پروفایلی یکنواخت خواهد داشت؛ سامانه در این حالت هشدار می‌دهد. همچنین با سه سؤال برای هر حوزه،
-            امتیازها گسسته‌اند و تفاوت‌های کوچک معنادار نیستند.
-          </div>
-
-          <div class="notice">
-            <strong>نسخه پژوهشی آینده:</strong>
-            می‌توان این مدل را با داده‌های واقعی دانش‌آموزان، تحلیل آماری، بررسی پایایی،
-            اعتبارسنجی سازه و نظر متخصصان آموزشی توسعه داد.
-          </div>
-
-        </div>
-
+        <a href="index.html"> Home → </a>
       </div>
-    </section>
+    </main>
 
-  </main>
+    <!-- =========================
+       FOOTER
+  ========================= -->
 
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-name">Mohammad Aminzadeh</div>
 
-  <!-- ===================== FOOTER ===================== -->
-
-  <footer>
-    <div class="container footer-inner">
-      <div>
-        <strong class="footer-brand">Talentino</strong>
-        <div>کشف → تحلیل → مسیر → پروژه → پیشرفت</div>
+        <div class="footer-copy">© 2026 Mohammad Aminzadeh</div>
       </div>
-      <div>ساخته‌شده به‌عنوان نمونه اولیه آموزشی و پژوهشی</div>
-    </div>
-  </footer>
-
-
-  <div id="toast" role="status" aria-live="polite"></div>
-
-
-  <script>
-    /* =========================================================
-       TALENTINO ENGINE v3
-       Explainable Multi-Domain Interest Profiling
-    ========================================================== */
-
-
-    /* =========================================================
-       1. DOMAIN DATABASE
-    ========================================================== */
-
-    const DOMAINS = {
-
-      technology: {
-        name: "فناوری و برنامه‌نویسی",
-        icon: "💻",
-        description: "علاقه به ساخت ابزارهای دیجیتال، برنامه‌نویسی، فناوری و کار با سیستم‌ها.",
-        path: [
-          "مبانی HTML و ساختار وب",
-          "CSS و طراحی رابط",
-          "JavaScript و منطق برنامه‌نویسی",
-          "ساخت یک پروژه واقعی",
-          "Git و انتشار پروژه",
-          "آشنایی با Backend و پایگاه داده"
-        ]
-      },
-
-      problem: {
-        name: "حل مسئله و تفکر منطقی",
-        icon: "🧠",
-        description: "تمایل به تحلیل مسئله، پیدا کردن الگو و ساخت راه‌حل مرحله‌به‌مرحله.",
-        path: [
-          "منطق و الگوها",
-          "تفکر الگوریتمی",
-          "حل مسائل مرحله‌ای",
-          "ساخت الگوریتم",
-          "تمرین مسائل پیچیده",
-          "پروژه حل مسئله"
-        ]
-      },
-
-      design: {
-        name: "طراحی و هنرهای تجسمی",
-        icon: "🎨",
-        description: "علاقه به رنگ، فرم، ترکیب‌بندی، تصویرسازی و خلق آثار بصری.",
-        path: [
-          "اصول ترکیب‌بندی",
-          "رنگ‌شناسی",
-          "تایپوگرافی",
-          "طراحی دیجیتال",
-          "ساخت هویت بصری",
-          "پروژه طراحی کامل"
-        ]
-      },
-
-      music: {
-        name: "موسیقی",
-        icon: "🎵",
-        description: "گرایش به ریتم، ملودی، ساز، شنیدن دقیق و ساخت یا اجرای موسیقی.",
-        path: [
-          "تقویت گوش موسیقایی",
-          "ریتم و هارمونی",
-          "تمرین ساز",
-          "آشنایی با آهنگسازی",
-          "نرم‌افزار تولید موسیقی",
-          "ساخت قطعه اصلی"
-        ]
-      },
-
-      science: {
-        name: "علوم و پژوهش",
-        icon: "🔬",
-        description: "علاقه به کشف، آزمایش، مشاهده، فرضیه‌سازی و فهم پدیده‌ها.",
-        path: [
-          "روش علمی",
-          "طرح سؤال پژوهشی",
-          "جمع‌آوری داده",
-          "آزمایش و مشاهده",
-          "تحلیل نتایج",
-          "نوشتن گزارش پژوهشی"
-        ]
-      },
-
-      mathematics: {
-        name: "ریاضی و استدلال کمی",
-        icon: "📐",
-        description: "علاقه به عدد، روابط، الگوهای ریاضی و استدلال کمی.",
-        path: [
-          "تقویت پایه ریاضی",
-          "الگوها و روابط",
-          "جبر و استدلال",
-          "هندسه و تجسم",
-          "مسائل ترکیبی",
-          "کاربرد ریاضی در پروژه"
-        ]
-      },
-
-      literature: {
-        name: "زبان و ادبیات",
-        icon: "📚",
-        description: "علاقه به خواندن، نوشتن، داستان، واژه‌ها و بیان دقیق ایده‌ها.",
-        path: [
-          "مطالعه هدفمند",
-          "تقویت واژگان",
-          "نوشتن خلاق",
-          "داستان‌پردازی",
-          "ویرایش متن",
-          "ساخت یک اثر مکتوب"
-        ]
-      },
-
-      languages: {
-        name: "زبان‌های خارجی",
-        icon: "🌍",
-        description: "تمایل به یادگیری زبان، ارتباط بین‌فرهنگی و استفاده از زبان‌های دیگر.",
-        path: [
-          "واژگان پایه",
-          "شنیدار",
-          "مکالمه",
-          "خواندن",
-          "نوشتن",
-          "پروژه محتوای چندزبانه"
-        ]
-      },
-
-      communication: {
-        name: "ارتباطات و سخنرانی",
-        icon: "🗣️",
-        description: "علاقه به توضیح ایده، گفت‌وگو، ارائه و انتقال پیام.",
-        path: [
-          "بیان روشن",
-          "ساختار ارائه",
-          "داستان‌گویی",
-          "زبان بدن",
-          "ارائه پروژه",
-          "ساخت یک ارائه حرفه‌ای"
-        ]
-      },
-
-      social: {
-        name: "تعامل اجتماعی و همکاری",
-        icon: "🤝",
-        description: "علاقه به همکاری، درک دیگران، کار تیمی و حل مسائل مشترک.",
-        path: [
-          "گوش دادن فعال",
-          "کار گروهی",
-          "تقسیم وظایف",
-          "حل اختلاف",
-          "همکاری پروژه‌ای",
-          "اجرای پروژه تیمی"
-        ]
-      },
-
-      leadership: {
-        name: "رهبری و مدیریت",
-        icon: "🧭",
-        description: "تمایل به برنامه‌ریزی، هماهنگی، تصمیم‌گیری و هدایت یک فعالیت.",
-        path: [
-          "هدف‌گذاری",
-          "برنامه‌ریزی",
-          "مدیریت زمان",
-          "تقسیم کار",
-          "تصمیم‌گیری",
-          "مدیریت یک پروژه"
-        ]
-      },
-
-      entrepreneurship: {
-        name: "کارآفرینی و کسب‌وکار",
-        icon: "💼",
-        description: "علاقه به شناسایی نیاز، ساخت ارزش، ارائه محصول و حل مسئله بازار.",
-        path: [
-          "شناسایی مسئله",
-          "شناخت مخاطب",
-          "ایده‌پردازی",
-          "ساخت نمونه اولیه",
-          "ارائه ارزش",
-          "آزمایش یک ایده واقعی"
-        ]
-      },
-
-      technical: {
-        name: "فنی و مهارتی",
-        icon: "🔧",
-        description: "علاقه به ساخت، تعمیر، ابزار، کار عملی و فهم سازوکار اشیا.",
-        path: [
-          "شناخت ابزار",
-          "ایمنی و اصول کار",
-          "مونتاژ و ساخت",
-          "عیب‌یابی",
-          "پروژه عملی",
-          "ساخت نمونه کاربردی"
-        ]
-      },
-
-      sports: {
-        name: "ورزش و فعالیت بدنی",
-        icon: "🏃",
-        description: "علاقه به فعالیت بدنی، تمرین، هماهنگی حرکتی و پیشرفت عملکردی.",
-        path: [
-          "شناخت رشته مناسب",
-          "اصول تمرین",
-          "تکنیک پایه",
-          "تمرین منظم",
-          "ثبت عملکرد",
-          "پروژه یا هدف ورزشی"
-        ]
-      },
-
-      performance: {
-        name: "اجرا و نمایش",
-        icon: "🎭",
-        description: "گرایش به اجرا، بازی، صحنه، بیان احساسی و حضور در مقابل مخاطب.",
-        path: [
-          "بیان و بدن",
-          "تمرین اجرا",
-          "کنترل صحنه",
-          "داستان‌گویی",
-          "اجرای کوتاه",
-          "ساخت یک اجرای کامل"
-        ]
-      },
-
-      education: {
-        name: "آموزش و انتقال دانش",
-        icon: "👨‍🏫",
-        description: "علاقه به توضیح مفاهیم، کمک به دیگران و تبدیل دانش به آموزش.",
-        path: [
-          "فهم عمیق موضوع",
-          "ساده‌سازی",
-          "ساخت مثال",
-          "ارائه آموزشی",
-          "ساخت محتوای آموزشی",
-          "طراحی یک درس کوتاه"
-        ]
-      },
-
-      environment: {
-        name: "محیط‌زیست و طبیعت",
-        icon: "🌱",
-        description: "علاقه به طبیعت، محیط‌زیست، پایداری و مسائل مرتبط با زمین.",
-        path: [
-          "شناخت مسئله محیط‌زیستی",
-          "مشاهده و ثبت",
-          "جمع‌آوری داده",
-          "ایده‌پردازی",
-          "طراحی راه‌حل",
-          "پروژه محیط‌زیستی"
-        ]
-      },
-
-      creativity: {
-        name: "خلاقیت و ایده‌پردازی",
-        icon: "💡",
-        description: "تمایل به تولید ایده‌های جدید، ترکیب مفاهیم و پیدا کردن راه‌های متفاوت.",
-        path: [
-          "مشاهده مسئله",
-          "تولید ایده",
-          "ترکیب ایده‌ها",
-          "نمونه‌سازی",
-          "آزمایش",
-          "ساخت اثر خلاقانه"
-        ]
-      }
-
-    };
-
-    const DOMAIN_KEYS = Object.keys(DOMAINS);
-
-
-    /* =========================================================
-       2. QUESTION BANK  (18 domains × 3 questions = 54)
-    ========================================================== */
-
-    const QUESTIONS = [
-
-      /* Technology */
-      { domain: "technology", text: "اگر یک ابزار دیجیتال ساده نداشته باشی، دوست داری خودت نمونه‌ای از آن بسازی؟" },
-      { domain: "technology", text: "وقتی با یک برنامه یا سایت جدید روبه‌رو می‌شوی، دوست داری بفهمی پشت آن چگونه ساخته شده است؟" },
-      { domain: "technology", text: "کار کردن با رایانه و ساخت چیزهای دیجیتال برایت جذاب است؟" },
-
-      /* Problem solving */
-      { domain: "problem", text: "وقتی با یک مسئله سخت روبه‌رو می‌شوی، از پیدا کردن راه‌حل مرحله‌به‌مرحله لذت می‌بری؟" },
-      { domain: "problem", text: "اگر یک روش جواب ندهد، معمولاً دوست داری روش دیگری امتحان کنی؟" },
-      { domain: "problem", text: "پیدا کردن الگوها و ارتباط بین چیزهای مختلف برایت جالب است؟" },
-
-      /* Design */
-      { domain: "design", text: "تغییر رنگ، فونت، شکل یا چیدمان یک اثر برای رسیدن به ظاهر بهتر برایت جذاب است؟" },
-      { domain: "design", text: "وقتی یک پوستر یا سایت می‌بینی، به زیبایی و ترکیب عناصر آن توجه می‌کنی؟" },
-      { domain: "design", text: "ساختن یک اثر بصری از یک ایده ذهنی برایت لذت‌بخش است؟" },
-
-      /* Music */
-      { domain: "music", text: "گوش دادن دقیق به ملودی، ریتم و تفاوت صداها برایت جذاب است؟" },
-      { domain: "music", text: "دوست داری ساز بزنی، آهنگ بسازی یا موسیقی را به شکل عمیق‌تری یاد بگیری؟" },
-      { domain: "music", text: "وقتی موسیقی می‌شنوی، گاهی به این فکر می‌کنی که چگونه ساخته شده است؟" },
-
-      /* Science */
-      { domain: "science", text: "وقتی پدیده‌ای را نمی‌فهمی، دوست داری درباره علت آن تحقیق کنی؟" },
-      { domain: "science", text: "انجام آزمایش برای بررسی اینکه یک فرضیه درست است یا نه برایت جذاب است؟" },
-      { domain: "science", text: "جمع‌آوری اطلاعات و رسیدن به یک نتیجه بر اساس شواهد را دوست داری؟" },
-
-      /* Mathematics */
-      { domain: "mathematics", text: "حل یک مسئله ریاضی که در ابتدا سخت به نظر می‌رسد برایت جذاب است؟" },
-      { domain: "mathematics", text: "پیدا کردن رابطه بین عددها و الگوهای عددی برایت جالب است؟" },
-      { domain: "mathematics", text: "از استدلال کردن برای رسیدن به یک پاسخ دقیق لذت می‌بری؟" },
-
-      /* Literature */
-      { domain: "literature", text: "نوشتن داستان، متن یا توضیح دادن یک ایده با کلمات برایت جذاب است؟" },
-      { domain: "literature", text: "هنگام خواندن متن، به انتخاب واژه‌ها و نحوه بیان نویسنده توجه می‌کنی؟" },
-      { domain: "literature", text: "دوست داری ایده‌ها یا احساساتت را از طریق نوشتن بیان کنی؟" },
-
-      /* Languages */
-      { domain: "languages", text: "یادگیری واژه‌ها و عبارت‌های یک زبان جدید برایت جالب است؟" },
-      { domain: "languages", text: "دوست داری بتوانی با افراد کشورهای دیگر به زبان خودشان ارتباط برقرار کنی؟" },
-      { domain: "languages", text: "تماشای محتوای خارجی و فهمیدن معنی آن بدون ترجمه برایت یک هدف جذاب است؟" },
-
-      /* Communication */
-      { domain: "communication", text: "توضیح دادن یک موضوع برای دیگران برایت راحت یا لذت‌بخش است؟" },
-      { domain: "communication", text: "از ارائه دادن ایده‌ها در مقابل دیگران لذت می‌بری؟" },
-      { domain: "communication", text: "می‌توانی یک موضوع پیچیده را به زبان ساده برای دیگران توضیح دهی؟" },
-
-      /* Social */
-      { domain: "social", text: "کار کردن با چند نفر برای رسیدن به یک هدف مشترک برایت جذاب است؟" },
-      { domain: "social", text: "در کار گروهی دوست داری نظر دیگران را بشنوی و از ایده‌هایشان استفاده کنی؟" },
-      { domain: "social", text: "وقتی یکی از اعضای گروه مشکلی دارد، معمولاً دوست داری به او کمک کنی؟" },
-
-      /* Leadership */
-      { domain: "leadership", text: "وقتی یک کار گروهی داریم، دوست داری برنامه کار را مشخص کنی؟" },
-      { domain: "leadership", text: "هماهنگ کردن چند کار و چند نفر برای رسیدن به یک نتیجه برایت جذاب است؟" },
-      { domain: "leadership", text: "در یک پروژه دوست داری مسئولیت مهمی بر عهده بگیری؟" },
-
-      /* Entrepreneurship */
-      { domain: "entrepreneurship", text: "وقتی یک مشکل می‌بینی، گاهی به این فکر می‌کنی که می‌توان از آن یک محصول یا خدمت ساخت؟" },
-      { domain: "entrepreneurship", text: "ایده ساختن یک پروژه که بتواند برای دیگران ارزش ایجاد کند برایت جذاب است؟" },
-      { domain: "entrepreneurship", text: "دوست داری یک ایده را از مرحله فکر به نمونه واقعی تبدیل کنی؟" },
-
-      /* Technical */
-      { domain: "technical", text: "کار کردن با ابزار و ساختن یا تعمیر کردن وسایل برایت جذاب است؟" },
-      { domain: "technical", text: "دوست داری بفهمی یک وسیله چگونه کار می‌کند و اگر خراب شد آن را بررسی کنی؟" },
-      { domain: "technical", text: "کار عملی با دست برایت به اندازه کار ذهنی جذاب یا حتی جذاب‌تر است؟" },
-
-      /* Sports */
-      { domain: "sports", text: "تمرین کردن برای بهتر شدن عملکرد بدنی برایت جذاب است؟" },
-      { domain: "sports", text: "از یادگیری مهارت‌های حرکتی و تکنیک‌های ورزشی لذت می‌بری؟" },
-      { domain: "sports", text: "وقتی در یک فعالیت ورزشی پیشرفت می‌کنی، انگیزه بیشتری برای ادامه پیدا می‌کنی؟" },
-
-      /* Performance */
-      { domain: "performance", text: "قرار گرفتن در نقش یک شخصیت یا اجرای یک اثر برای مخاطب برایت جذاب است؟" },
-      { domain: "performance", text: "از اجرا، نمایش یا بیان احساسات در مقابل دیگران لذت می‌بری؟" },
-      { domain: "performance", text: "دوست داری یک اجرای کامل را از تمرین تا اجرا آماده کنی؟" },
-
-      /* Education */
-      { domain: "education", text: "وقتی چیزی را خوب یاد می‌گیری، دوست داری آن را به دیگران هم آموزش بدهی؟" },
-      { domain: "education", text: "پیدا کردن روش ساده برای توضیح یک مفهوم پیچیده برایت جذاب است؟" },
-      { domain: "education", text: "ساختن محتوای آموزشی برای کمک به یادگیری دیگران برایت جالب است؟" },
-
-      /* Environment */
-      { domain: "environment", text: "طبیعت، حیوانات و مسائل مربوط به محیط‌زیست توجهت را جلب می‌کند؟" },
-      { domain: "environment", text: "دوست داری برای یک مشکل محیط‌زیستی راه‌حل عملی پیدا کنی؟" },
-      { domain: "environment", text: "مشاهده تغییرات طبیعت و جمع‌آوری اطلاعات درباره آن برایت جذاب است؟" },
-
-      /* Creativity */
-      { domain: "creativity", text: "معمولاً برای یک مسئله چند ایده متفاوت به ذهنت می‌رسد؟" },
-      { domain: "creativity", text: "ترکیب کردن دو ایده متفاوت و ساختن یک چیز جدید برایت لذت‌بخش است؟" },
-      { domain: "creativity", text: "از انجام دادن کارها به روش متفاوت، حتی اگر روش معمول ساده‌تر باشد، لذت می‌بری؟" }
-    ];
-
-
-    /* =========================================================
-       3. ANSWER SCALE
-    ========================================================== */
-
-    const ANSWERS = [
-      { value: 1, label: "اصلاً شبیه من نیست" },
-      { value: 2, label: "کمی شبیه من است" },
-      { value: 3, label: "تا حدی شبیه من است" },
-      { value: 4, label: "خیلی شبیه من است" },
-      { value: 5, label: "کاملاً شبیه من است" }
-    ];
-
-
-    /* =========================================================
-       4. CHALLENGE DATABASE
-    ========================================================== */
-
-    const CHALLENGES = [
-      { id: "web-page", title: "ساخت یک صفحه وب", domain: "technology", level: "مقدماتی", time: "۶۰ دقیقه",
-        description: "یک صفحه معرفی شخصی با HTML و CSS بساز." },
-      { id: "multi-step", title: "حل یک مسئله چندمرحله‌ای", domain: "problem", level: "متوسط", time: "۴۵ دقیقه",
-        description: "یک مسئله را به چند مرحله کوچک تقسیم و راه‌حل را مستند کن." },
-      { id: "poster", title: "طراحی یک پوستر", domain: "design", level: "مقدماتی", time: "۹۰ دقیقه",
-        description: "برای یک رویداد فرضی پوستر طراحی کن و دلیل انتخاب رنگ و فونت را بنویس." },
-      { id: "melody", title: "ساخت یک ملودی", domain: "music", level: "مقدماتی", time: "۶۰ دقیقه",
-        description: "یک ملودی کوتاه بساز و ساختار آن را توضیح بده." },
-      { id: "experiment", title: "طراحی یک آزمایش", domain: "science", level: "متوسط", time: "۶۰ دقیقه",
-        description: "برای یک سؤال علمی، فرضیه، متغیرها و روش آزمایش بنویس." },
-      { id: "number-pattern", title: "پیدا کردن الگوی عددی", domain: "mathematics", level: "متوسط", time: "۳۰ دقیقه",
-        description: "یک الگوی عددی طراحی کن و قانون آن را توضیح بده." },
-      { id: "short-story", title: "داستان کوتاه", domain: "literature", level: "مقدماتی", time: "۶۰ دقیقه",
-        description: "یک داستان کوتاه با شروع، بحران و پایان بنویس." },
-      { id: "foreign-intro", title: "معرفی یک موضوع به زبان دیگر", domain: "languages", level: "متوسط", time: "۴۵ دقیقه",
-        description: "یک موضوع ساده را در یک زبان خارجی معرفی کن." },
-      { id: "three-min-talk", title: "ارائه سه‌دقیقه‌ای", domain: "communication", level: "مقدماتی", time: "۳۰ دقیقه",
-        description: "یک موضوع را در سه دقیقه با ساختار مقدمه، بدنه و نتیجه ارائه کن." },
-      { id: "team-project", title: "پروژه تیمی کوچک", domain: "social", level: "متوسط", time: "۱۲۰ دقیقه",
-        description: "با دو یا سه نفر یک فعالیت کوچک را تقسیم وظایف و اجرا کن." },
-      { id: "project-plan", title: "برنامه‌ریزی یک پروژه", domain: "leadership", level: "متوسط", time: "۴۵ دقیقه",
-        description: "برای یک پروژه فرضی زمان‌بندی و تقسیم وظایف ایجاد کن." },
-      { id: "product-idea", title: "ایده یک محصول", domain: "entrepreneurship", level: "متوسط", time: "۶۰ دقیقه",
-        description: "یک مشکل واقعی را پیدا کن و نمونه اولیه راه‌حل را تعریف کن." },
-      { id: "simple-device", title: "ساخت یک وسیله ساده", domain: "technical", level: "مقدماتی", time: "۹۰ دقیقه",
-        description: "با ابزارهای امن و در دسترس (و در صورت نیاز با کمک بزرگ‌تر) یک وسیله ساده بساز." },
-      { id: "sport-goal", title: "هدف ورزشی", domain: "sports", level: "مقدماتی", time: "۳۰ دقیقه",
-        description: "یک هدف ورزشی سالم و قابل اندازه‌گیری برای خودت تعریف کن." },
-      { id: "short-performance", title: "اجرای کوتاه", domain: "performance", level: "متوسط", time: "۶۰ دقیقه",
-        description: "یک اجرای کوتاه آماده و ضبط کن و نقاط قوت و ضعف را بنویس." },
-      { id: "teach-concept", title: "آموزش یک مفهوم", domain: "education", level: "مقدماتی", time: "۴۵ دقیقه",
-        description: "یک مفهوم را طوری توضیح بده که دانش‌آموز دیگری بتواند آن را بفهمد." },
-      { id: "eco-issue", title: "بررسی یک مسئله محیط‌زیستی", domain: "environment", level: "متوسط", time: "۹۰ دقیقه",
-        description: "یک مشکل محیط‌زیستی محلی را بررسی و یک راه‌حل پیشنهادی ارائه کن." },
-      { id: "twenty-ideas", title: "ایده‌پردازی ۲۰گانه", domain: "creativity", level: "مقدماتی", time: "۳۰ دقیقه",
-        description: "برای یک مسئله مشخص، ۲۰ راه‌حل متفاوت تولید کن." }
-    ];
-
-    const CHALLENGE_IDS = CHALLENGES.map(c => c.id);
-
-
-    /* =========================================================
-       5. STATE
-       - answers / resultsReady : آخرین ارزیابی کامل‌شده
-       - draft                  : ارزیابی نیمه‌کاره (قابل ادامه)
-    ========================================================== */
-
-    const STORAGE_KEY = "talentino_v3";
-    const TOP_COUNT = 3;
-    const PATH_COUNT = 6;
-
-    function defaultState() {
-      return {
-        version: 3,
-        draft: null,               // { currentQuestion, answers }
-        answers: {},
-        resultsReady: false,
-        completedChallenges: [],
-        projects: []
-      };
-    }
-
-    let state = defaultState();
-    let assessmentView = "start";  // start | quiz | complete
-
-
-    /* =========================================================
-       6. STORAGE (validated)
-    ========================================================== */
-
-    function sanitizeAnswers(raw) {
-      const clean = {};
-      if (!raw || typeof raw !== "object") return clean;
-
-      Object.entries(raw).forEach(([key, value]) => {
-        const index = Number(key);
-        const val = Number(value);
-
-        if (
-          Number.isInteger(index) &&
-          index >= 0 &&
-          index < QUESTIONS.length &&
-          Number.isInteger(val) &&
-          val >= 1 &&
-          val <= 5
-        ) {
-          clean[index] = val;
-        }
-      });
-
-      return clean;
-    }
-
-    function loadState() {
-      try {
-        const saved = localStorage.getItem(STORAGE_KEY);
-        if (!saved) return;
-
-        const parsed = JSON.parse(saved);
-        if (!parsed || typeof parsed !== "object") return;
-
-        const next = defaultState();
-
-        next.answers = sanitizeAnswers(parsed.answers);
-        next.resultsReady =
-          parsed.resultsReady === true &&
-          Object.keys(next.answers).length === QUESTIONS.length;
-
-        if (parsed.draft && typeof parsed.draft === "object") {
-          const draftAnswers = sanitizeAnswers(parsed.draft.answers);
-          const cq = Number(parsed.draft.currentQuestion);
-
-          next.draft = {
-            answers: draftAnswers,
-            currentQuestion:
-              Number.isInteger(cq) && cq >= 0 && cq < QUESTIONS.length ? cq : 0
-          };
-        }
-
-        if (Array.isArray(parsed.completedChallenges)) {
-          next.completedChallenges =
-            parsed.completedChallenges.filter(id => CHALLENGE_IDS.includes(id));
-        }
-
-        if (Array.isArray(parsed.projects)) {
-          next.projects = parsed.projects
-            .filter(p => p && typeof p === "object" && p.title && p.description)
-            .map(p => ({
-              id: p.id ?? makeId(),
-              title: String(p.title).slice(0, 80),
-              domain: DOMAINS[p.domain] ? p.domain : DOMAIN_KEYS[0],
-              description: String(p.description).slice(0, 500),
-              createdAt: String(p.createdAt || "")
-            }));
-        }
-
-        state = next;
-      } catch (error) {
-        console.warn("Could not load saved data.", error);
-        state = defaultState();
-      }
-    }
-
-    function saveState() {
-      try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-        return true;
-      } catch (error) {
-        console.warn("Could not save data.", error);
-        showToast("ذخیره‌سازی در مرورگر ممکن نشد؛ ممکن است اطلاعات پس از بستن صفحه از بین برود.");
-        return false;
-      }
-    }
-
-    function makeId() {
-      return Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
-    }
-
-
-    /* =========================================================
-       7. UTILITIES
-    ========================================================== */
-
-    function fa(value) {
-      return String(value).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
-    }
-
-    function escapeHTML(value) {
-      return String(value)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
-
-    function domainOf(key) {
-      return DOMAINS[key] || { name: "نامشخص", icon: "📌", description: "", path: [] };
-    }
-
-    function el(id) {
-      return document.getElementById(id);
-    }
-
-    function showToast(message) {
-      const toast = el("toast");
-      toast.textContent = message;
-      toast.classList.add("show");
-
-      clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(() => toast.classList.remove("show"), 2800);
-    }
-
-    function makeButton(label, className, handler) {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "btn " + className;
-      button.textContent = label;
-      button.addEventListener("click", handler);
-      return button;
-    }
-
-
-    /* =========================================================
-       8. INITIALIZATION
-    ========================================================== */
-
-    document.addEventListener("DOMContentLoaded", () => {
-
-      loadState();
-
-      el("infoDomains").textContent = `${fa(DOMAIN_KEYS.length)} حوزه`;
-      el("infoQuestions").textContent = `${fa(QUESTIONS.length)} پرسش`;
-
-      populateProjectDomains();
-      renderAssessmentStart();
-      renderProjects();
-      renderChallenges();
-      renderResults();
-      renderPaths();
-      updateProgressDashboard();
-
-    });
-
-
-    /* =========================================================
-       9. NAVIGATION  (Landing ⇄ App)
-    ========================================================== */
-
-    function toggleMenu(forceClose = false) {
-      const nav = el("navLinks");
-      const toggle = el("menuToggle");
-
-      const open = forceClose ? false : !nav.classList.contains("open");
-
-      nav.classList.toggle("open", open);
-      toggle.setAttribute("aria-expanded", String(open));
-    }
-
-    function showHome(scrollTargetId) {
-
-      toggleMenu(true);
-
-      el("app").classList.remove("open");
-      el("landing").style.display = "block";
-
-      if (scrollTargetId) {
-        setTimeout(() => {
-          el(scrollTargetId)?.scrollIntoView({ behavior: "smooth" });
-        }, 40);
-      } else {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    }
-
-    function scrollToSection(id) {
-
-      if (el("app").classList.contains("open")) {
-        showHome(id);
-        return;
-      }
-
-      toggleMenu(true);
-      el(id)?.scrollIntoView({ behavior: "smooth" });
-    }
-
-    function openApp(panel = "assessment") {
-
-      toggleMenu(true);
-
-      el("landing").style.display = "none";
-      el("app").classList.add("open");
-
-      switchPanel(panel);
-
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-
-    const PANEL_TITLES = {
-      assessment: "ارزیابی اولیه",
-      results: "پروفایل علایق",
-      paths: "مسیرهای رشد",
-      challenges: "چالش‌های عملی",
-      projects: "دفتر پروژه",
-      progress: "داشبورد پیشرفت",
-      method: "روش‌شناسی"
-    };
-
-    function switchPanel(panel) {
-
-      const target = el("panel-" + panel);
-      if (!target) return;
-
-      document.querySelectorAll(".app-panel").forEach(p => p.classList.remove("active"));
-
-      document.querySelectorAll(".app-tabs button").forEach(b => {
-        b.classList.remove("active");
-        b.setAttribute("aria-selected", "false");
-      });
-
-      target.classList.add("active");
-
-      const tab = el("tab-" + panel);
-      if (tab) {
-        tab.classList.add("active");
-        tab.setAttribute("aria-selected", "true");
-      }
-
-      el("appTitle").textContent = PANEL_TITLES[panel] || "Talentino";
-
-      if (panel === "assessment") {
-        if (assessmentView === "complete") assessmentView = "start";
-        renderAssessmentStart();
-      }
-
-      if (panel === "results") renderResults();
-      if (panel === "paths") renderPaths();
-      if (panel === "challenges") renderChallenges();
-      if (panel === "progress") updateProgressDashboard();
-    }
-
-
-    /* =========================================================
-       10. ASSESSMENT FLOW
-    ========================================================== */
-
-    function setAssessmentView(view) {
-      assessmentView = view;
-
-      el("assessmentStart").style.display = view === "start" ? "block" : "none";
-      el("assessmentQuiz").style.display = view === "quiz" ? "block" : "none";
-      el("assessmentComplete").style.display = view === "complete" ? "block" : "none";
-    }
-
-    function renderAssessmentStart() {
-
-      if (assessmentView === "quiz") {
-        setAssessmentView("quiz");
-        return;
-      }
-
-      setAssessmentView(assessmentView === "complete" ? "complete" : "start");
-
-      const actions = el("startActions");
-      const note = el("startNote");
-
-      actions.innerHTML = "";
-      note.textContent = "";
-
-      const draftCount = state.draft ? Object.keys(state.draft.answers).length : 0;
-
-      if (state.draft && draftCount > 0) {
-
-        note.textContent =
-          `یک ارزیابی نیمه‌کاره داری (${fa(draftCount)} پاسخ از ${fa(QUESTIONS.length)}).`;
-
-        actions.appendChild(
-          makeButton("ادامه ارزیابی", "btn-primary", () => beginAssessment(false))
-        );
-
-        actions.appendChild(
-          makeButton("شروع از نو", "btn-secondary", () => beginAssessment(true))
-        );
-
-      } else if (state.resultsReady) {
-
-        note.textContent =
-          "قبلاً یک ارزیابی کامل کرده‌ای. نتیجه قبلی تا پایان ارزیابی جدید حفظ می‌شود.";
-
-        actions.appendChild(
-          makeButton("ارزیابی دوباره", "btn-primary", () => beginAssessment(true))
-        );
-
-        actions.appendChild(
-          makeButton("مشاهده پروفایل فعلی", "btn-secondary", () => switchPanel("results"))
-        );
-
-      } else {
-
-        actions.appendChild(
-          makeButton("شروع ارزیابی", "btn-primary", () => beginAssessment(true))
-        );
-
-      }
-    }
-
-    function beginAssessment(fresh) {
-
-      const hasDraft = state.draft && Object.keys(state.draft.answers).length > 0;
-
-      if (fresh && hasDraft) {
-        const ok = confirm("ارزیابی نیمه‌کاره قبلی حذف و از نو شروع شود؟");
-        if (!ok) return;
-      }
-
-      if (fresh || !state.draft) {
-        state.draft = { currentQuestion: 0, answers: {} };
-        saveState();
-      }
-
-      setAssessmentView("quiz");
-      renderQuestion();
-    }
-
-    function renderQuestion(focusSelected = false) {
-
-      const draft = state.draft;
-      if (!draft) return;
-
-      const index = draft.currentQuestion;
-      const question = QUESTIONS[index];
-      if (!question) return;
-
-      const answeredCount = Object.keys(draft.answers).length;
-
-      el("questionCounter").textContent =
-        `سؤال ${fa(index + 1)} از ${fa(QUESTIONS.length)}`;
-
-      el("questionNumber").textContent = `پرسش ${fa(index + 1)}`;
-      el("questionText").textContent = question.text;
-
-      const domain = domainOf(question.domain);
-      el("questionDomain").textContent = `${domain.icon} ${domain.name}`;
-
-      const percent = Math.round((answeredCount / QUESTIONS.length) * 100);
-
-      el("assessmentProgress").style.width = `${percent}%`;
-      el("progressBarWrap").setAttribute("aria-valuenow", String(percent));
-
-      const container = el("optionsContainer");
-      container.innerHTML = "";
-
-      let selectedButton = null;
-
-      ANSWERS.forEach(answer => {
-
-        const isSelected = draft.answers[index] === answer.value;
-
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = "option" + (isSelected ? " selected" : "");
-        button.setAttribute("aria-pressed", String(isSelected));
-
-        button.innerHTML = `
-          <span class="option-mark">${isSelected ? "✓" : fa(answer.value)}</span>
-          <span>${answer.label}</span>
-        `;
-
-        button.addEventListener("click", () => selectAnswer(answer.value));
-
-        if (isSelected) selectedButton = button;
-
-        container.appendChild(button);
-      });
-
-      if (focusSelected && selectedButton) selectedButton.focus();
-
-      el("prevQuestionBtn").disabled = index === 0;
-
-      el("nextQuestionBtn").textContent =
-        index === QUESTIONS.length - 1 ? "پایان و تحلیل ✓" : "بعدی →";
-    }
-
-    function selectAnswer(value) {
-      if (!state.draft) return;
-
-      state.draft.answers[state.draft.currentQuestion] = value;
-      saveState();
-      renderQuestion(true);
-    }
-
-    function nextQuestion() {
-
-      const draft = state.draft;
-      if (!draft) return;
-
-      if (draft.answers[draft.currentQuestion] === undefined) {
-        showToast("ابتدا یکی از گزینه‌ها را انتخاب کن.");
-        return;
-      }
-
-      if (draft.currentQuestion === QUESTIONS.length - 1) {
-        finishAssessment();
-        return;
-      }
-
-      draft.currentQuestion++;
-      saveState();
-      renderQuestion();
-    }
-
-    function previousQuestion() {
-
-      const draft = state.draft;
-      if (!draft || draft.currentQuestion <= 0) return;
-
-      draft.currentQuestion--;
-      saveState();
-      renderQuestion();
-    }
-
-    function finishAssessment() {
-
-      const draft = state.draft;
-      if (!draft) return;
-
-      const missing = QUESTIONS.findIndex((_, i) => draft.answers[i] === undefined);
-
-      if (missing !== -1) {
-        draft.currentQuestion = missing;
-        saveState();
-        renderQuestion();
-        showToast(`سؤال ${fa(missing + 1)} هنوز بی‌پاسخ است.`);
-        return;
-      }
-
-      state.answers = { ...draft.answers };
-      state.resultsReady = true;
-      state.draft = null;
-
-      saveState();
-
-      setAssessmentView("complete");
-
-      renderResults();
-      renderPaths();
-      renderChallenges();
-      updateProgressDashboard();
-
-      showToast("تحلیل پروفایل با موفقیت انجام شد.");
-    }
-
-
-    /* =========================================================
-       11. ALGORITHM
-       score = ((mean − 1) / 4) × 100   (scale 1..5 → 0..100)
-       Tie-break: score → count(answers ≥ 4) → max answer → fixed order
-    ========================================================== */
-
-    function computeStats(answers) {
-
-      const stats = {};
-
-      DOMAIN_KEYS.forEach(key => {
-        stats[key] = { sum: 0, count: 0, strong: 0, max: 0, score: 0 };
-      });
-
-      QUESTIONS.forEach((question, index) => {
-
-        const value = answers[index];
-        if (value === undefined) return;
-
-        const s = stats[question.domain];
-
-        s.sum += value;
-        s.count++;
-        if (value >= 4) s.strong++;
-        if (value > s.max) s.max = value;
-      });
-
-      DOMAIN_KEYS.forEach(key => {
-        const s = stats[key];
-
-        s.score = s.count === 0
-          ? 0
-          : Math.round(((s.sum / s.count - 1) / 4) * 100);
-      });
-
-      return stats;
-    }
-
-    function sortedDomains() {
-
-      if (!state.resultsReady) return [];
-
-      const stats = computeStats(state.answers);
-
-      return DOMAIN_KEYS
-        .map((key, order) => ({ key, order, ...stats[key] }))
-        .sort((a, b) =>
-          b.score - a.score ||
-          b.strong - a.strong ||
-          b.max - a.max ||
-          a.order - b.order
-        );
-    }
-
-    function calculateOverallScore(sorted) {
-
-      if (!sorted.length) return 0;
-
-      return Math.round(
-        sorted.reduce((total, item) => total + item.score, 0) / sorted.length
-      );
-    }
-
-
-    /* =========================================================
-       12. RESULTS
-    ========================================================== */
-
-    function renderResults() {
-
-      const ready = state.resultsReady;
-
-      el("noResults").style.display = ready ? "none" : "block";
-      el("resultsContent").style.display = ready ? "block" : "none";
-
-      if (!ready) return;
-
-      const sorted = sortedDomains();
-      const overall = calculateOverallScore(sorted);
-
-      el("overallScore").textContent = fa(overall);
-      el("overallCircle").style.setProperty("--score", `${overall}%`);
-
-      const topNames = sorted
-        .slice(0, TOP_COUNT)
-        .map(item => domainOf(item.key).name);
-
-      el("resultSummary").textContent =
-        `میانگین کلی پاسخ‌های تو ${fa(overall)} از ${fa(100)} است. ` +
-        `سه حوزه برجسته‌تر در این ارزیابی عبارت‌اند از ${topNames.join("، ")}. ` +
-        `این نتیجه را نقطه شروع تجربه و ساخت پروژه‌های واقعی بدان، نه برچسب قطعی درباره توانایی.`;
-
-      renderInsights(sorted, overall);
-
-      const list = el("domainResults");
-      list.innerHTML = "";
-
-      sorted.forEach(item => {
-
-        const domain = domainOf(item.key);
-        const row = document.createElement("div");
-
-        row.className = "domain-row";
-
-        row.innerHTML = `
-          <span>${domain.icon} ${domain.name}</span>
-          <div class="bar"><span style="width:${item.score}%"></span></div>
-          <strong>${fa(item.score)}</strong>
-        `;
-
-        list.appendChild(row);
-      });
-
-      sorted.slice(0, TOP_COUNT).forEach((item, i) => {
-
-        const domain = domainOf(item.key);
-
-        el(`topDomain${i + 1}`).textContent = `${domain.icon} ${domain.name}`;
-        el(`topDomain${i + 1}Desc`).textContent = domain.description;
-      });
-    }
-
-    function renderInsights(sorted, overall) {
-
-      const insights = [];
-
-      const spread = sorted[0].score - sorted[sorted.length - 1].score;
-
-      if (spread < 25) {
-        insights.push(
-          "پاسخ‌های تو در همه حوزه‌ها نسبتاً نزدیک به هم بوده است؛ بنابراین رتبه‌بندی تمایز زیادی ندارد و بهتر است چند حوزه را عملاً امتحان کنی."
-        );
-      }
-
-      if (overall >= 90) {
-        insights.push(
-          "میانگین پاسخ‌هایت بسیار بالاست. اگر به بیشتر گزینه‌ها امتیاز بالا داده‌ای، به تفاوت‌های نسبی بین حوزه‌ها بیشتر از خود عددها توجه کن."
-        );
-      } else if (overall <= 15) {
-        insights.push(
-          "میانگین پاسخ‌هایت بسیار پایین است. شاید گزینه‌ها با تجربه‌های فعلی تو فاصله دارند؛ امتحان کردن فعالیت‌های تازه می‌تواند کمک کند."
-        );
-      }
-
-      if (sorted[TOP_COUNT - 1].score === sorted[TOP_COUNT].score) {
-        insights.push(
-          "در مرز حوزه‌های برجسته امتیاز برابر وجود دارد؛ حوزه‌های هم‌امتیاز را هم امتحان کن."
-        );
-      }
-
-      el("resultInsights").innerHTML =
-        insights.map(text => `<p style="margin-top:8px">💡 ${escapeHTML(text)}</p>`).join("");
-    }
-
-
-    /* =========================================================
-       13. LEARNING PATHS
-    ========================================================== */
-
-    function renderPaths() {
-
-      const container = el("pathsContainer");
-
-      if (!state.resultsReady) {
-
-        container.innerHTML = `
-          <div class="card">
-            <h3>ابتدا ارزیابی را کامل کن.</h3>
-            <p>بعد از تحلیل، مسیرها بر اساس پروفایل تو مرتب می‌شوند.</p>
-          </div>
-        `;
-
-        return;
-      }
-
-      container.innerHTML = "";
-
-      sortedDomains().slice(0, PATH_COUNT).forEach((item, index) => {
-
-        const domain = domainOf(item.key);
-
-        const card = document.createElement("article");
-        card.className = "card path-card";
-
-        card.innerHTML = `
-          <div class="path-level">مسیر ${fa(index + 1)} · امتیاز ${fa(item.score)}</div>
-          <h3>${domain.icon} ${domain.name}</h3>
-          <p>${domain.description}</p>
-          <div class="steps">
-            ${domain.path.map((step, i) => `<div class="step">${fa(i + 1)}. ${step}</div>`).join("")}
-          </div>
-        `;
-
-        container.appendChild(card);
-      });
-    }
-
-
-    /* =========================================================
-       14. CHALLENGES
-    ========================================================== */
-
-    function renderChallenges() {
-
-      const container = el("challengesContainer");
-      container.innerHTML = "";
-
-      const recommended = state.resultsReady
-        ? sortedDomains().slice(0, 5).map(item => item.key)
-        : [];
-
-      const list = [
-        ...CHALLENGES.filter(c => recommended.includes(c.domain)),
-        ...CHALLENGES.filter(c => !recommended.includes(c.domain))
-      ];
-
-      list.forEach(challenge => {
-
-        const domain = domainOf(challenge.domain);
-        const completed = state.completedChallenges.includes(challenge.id);
-        const isRecommended = recommended.includes(challenge.domain);
-
-        const card = document.createElement("article");
-        card.className = "card challenge-card";
-
-        card.innerHTML = `
-          <div>
-            <span class="tag">${domain.icon} ${domain.name}</span>
-            ${isRecommended ? '<span class="tag tag-accent">پیشنهادی برای تو</span>' : ""}
-          </div>
-
-          <h3 style="margin-top:12px">${challenge.title}</h3>
-
-          <div class="challenge-meta">
-            <span class="tag">${challenge.level}</span>
-            <span class="tag">⏱ ${challenge.time}</span>
-          </div>
-
-          <p>${challenge.description}</p>
-        `;
-
-        const button = makeButton(
-          completed ? "✓ تکمیل شده" : "تکمیل کردم",
-          completed ? "btn-secondary" : "btn-primary",
-          () => toggleChallenge(challenge.id)
-        );
-
-        button.setAttribute("aria-pressed", String(completed));
-
-        card.appendChild(button);
-        container.appendChild(card);
-      });
-    }
-
-    function toggleChallenge(id) {
-
-      const index = state.completedChallenges.indexOf(id);
-
-      if (index >= 0) {
-        state.completedChallenges.splice(index, 1);
-        showToast("چالش دوباره فعال شد.");
-      } else {
-        state.completedChallenges.push(id);
-        showToast("چالش به پیشرفتت اضافه شد 🎯");
-      }
-
-      saveState();
-      renderChallenges();
-      updateProgressDashboard();
-    }
-
-
-    /* =========================================================
-       15. PROJECTS
-    ========================================================== */
-
-    function populateProjectDomains() {
-
-      const select = el("projectDomain");
-      select.innerHTML = "";
-
-      DOMAIN_KEYS.forEach(key => {
-
-        const domain = DOMAINS[key];
-        const option = document.createElement("option");
-
-        option.value = key;
-        option.textContent = `${domain.icon} ${domain.name}`;
-
-        select.appendChild(option);
-      });
-    }
-
-    function addProject(event) {
-
-      event.preventDefault();
-
-      const title = el("projectTitle").value.trim();
-      const domain = el("projectDomain").value;
-      const description = el("projectDescription").value.trim();
-
-      if (!title || !description) {
-        showToast("لطفاً نام و توضیح پروژه را کامل کن.");
-        return;
-      }
-
-      state.projects.push({
-        id: makeId(),
-        title,
-        domain: DOMAINS[domain] ? domain : DOMAIN_KEYS[0],
-        description,
-        createdAt: new Date().toLocaleDateString("fa-IR")
-      });
-
-      saveState();
-
-      event.target.reset();
-
-      renderProjects();
-      updateProgressDashboard();
-
-      showToast("پروژه با موفقیت ثبت شد 📁");
-    }
-
-    function renderProjects() {
-
-      const container = el("projectList");
-      container.innerHTML = "";
-
-      if (!state.projects.length) {
-        container.innerHTML = `<div style="color:var(--muted)">هنوز پروژه‌ای ثبت نشده است.</div>`;
-        return;
-      }
-
-      [...state.projects].reverse().forEach(project => {
-
-        const domain = domainOf(project.domain);
-
-        const item = document.createElement("div");
-        item.className = "project-item";
-
-        item.innerHTML = `
-          <div class="project-item-top">
-            <div>
-              <span class="tag">${domain.icon} ${domain.name}</span>
-              <h3 style="margin-top:7px">${escapeHTML(project.title)}</h3>
-            </div>
-          </div>
-
-          <p>${escapeHTML(project.description)}</p>
-
-          <small style="color:var(--muted)">ثبت شده در ${escapeHTML(project.createdAt)}</small>
-        `;
-
-        const deleteButton = makeButton("حذف", "btn-danger btn-small", () => deleteProject(project.id));
-        item.querySelector(".project-item-top").appendChild(deleteButton);
-
-        container.appendChild(item);
-      });
-    }
-
-    function deleteProject(id) {
-
-      if (!confirm("این پروژه حذف شود؟")) return;
-
-      state.projects = state.projects.filter(project => project.id !== id);
-
-      saveState();
-
-      renderProjects();
-      updateProgressDashboard();
-
-      showToast("پروژه حذف شد.");
-    }
-
-
-    /* =========================================================
-       16. PROGRESS DASHBOARD
-    ========================================================== */
-
-    function updateProgressDashboard() {
-
-      const answeredCount = state.draft
-        ? Object.keys(state.draft.answers).length
-        : Object.keys(state.answers).length;
-
-      const sorted = sortedDomains();
-      const overall = calculateOverallScore(sorted);
-
-      el("statQuestions").textContent = fa(answeredCount);
-      el("statProjects").textContent = fa(state.projects.length);
-      el("statChallenges").textContent = fa(state.completedChallenges.length);
-      el("statScore").textContent = fa(overall);
-
-      const container = el("progressDomains");
-      container.innerHTML = "";
-
-      const scoreMap = {};
-      sorted.forEach(item => { scoreMap[item.key] = item.score; });
-
-      DOMAIN_KEYS.forEach(key => {
-
-        const domain = DOMAINS[key];
-        const score = scoreMap[key] || 0;
-
-        const row = document.createElement("div");
-        row.className = "domain-progress";
-
-        row.innerHTML = `
-          <span>${domain.icon} ${domain.name}</span>
-          <div class="bar"><span style="width:${score}%"></span></div>
-          <strong>${fa(score)}</strong>
-        `;
-
-        container.appendChild(row);
-      });
-    }
-
-
-    /* =========================================================
-       17. RESET
-    ========================================================== */
-
-    function resetAll() {
-
-      const confirmed = confirm(
-        "همه پاسخ‌ها، پروفایل، پروژه‌ها و پیشرفت ذخیره‌شده حذف شود؟"
-      );
-
-      if (!confirmed) return;
-
-      try {
-        localStorage.removeItem(STORAGE_KEY);
-      } catch (error) {
-        console.warn("Could not clear storage.", error);
-      }
-
-      state = defaultState();
-      assessmentView = "start";
-
-      renderAssessmentStart();
-      renderProjects();
-      renderChallenges();
-      renderResults();
-      renderPaths();
-      updateProgressDashboard();
-
-      switchPanel("assessment");
-
-      showToast("اطلاعات پاک شد.");
-    }
-
-
-    /* =========================================================
-       18. KEYBOARD SUPPORT
-    ========================================================== */
-
-    document.addEventListener("keydown", event => {
-
-      const tag = (event.target.tagName || "").toLowerCase();
-      if (["input", "textarea", "select"].includes(tag)) return;
-      if (event.ctrlKey || event.metaKey || event.altKey) return;
-
-      const quizActive =
-        assessmentView === "quiz" &&
-        el("app").classList.contains("open") &&
-        el("panel-assessment").classList.contains("active");
-
-      if (!quizActive) return;
-
-      if (event.key >= "1" && event.key <= "5") {
-        selectAnswer(Number(event.key));
-      } else if (event.key === "ArrowLeft") {
-        nextQuestion();
-      } else if (event.key === "ArrowRight") {
-        previousQuestion();
-      }
-    });
-  </script>
-
-</body>
-  </html>
+    </footer>
+  </body>
+</html>
