@@ -1,1003 +1,589 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl" class="no-js">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0D0D0D">
-  <meta name="color-scheme" content="dark">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-  <!-- SEO: این بخش را برای هر مشتری تغییر دهید -->
-  <title>آموزشگاه موسیقی آوا | کلاس پیانو، گیتار، ویولن و آواز</title>
-  <meta name="description" content="آموزش حضوری پیانو، گیتار، ویولن و آواز با مدرس‌های متخصص و برنامه‌ی آموزشی متناسب با سطح شما. برای دریافت مشاوره ثبت‌نام کنید.">
-  <link rel="canonical" href="https://example.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="fa_IR">
-  <meta property="og:title" content="آموزشگاه موسیقی آوا">
-  <meta property="og:description" content="آموزش حضوری پیانو، گیتار، ویولن و آواز برای همه‌ی سنین.">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:image" content="https://example.com/og-image.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- فونت: Vazirmatn از Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Logo Design — Mohammad Aminzadeh</title>
 
-  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+    <meta
+      name="description"
+      content="Selected logo design projects by Mohammad Aminzadeh."
+    />
 
-  <style>
-    /* =========================================================
-       TOKENS
-       ========================================================= */
-    :root {
-      --ink: #0D0D0D;
-      --surface: #141414;
-      --surface-2: #1B1B1B;
-      --line: #2B2B2B;
-      --gold: #D4AF37;
-      --white: #FFFFFF;
-      --text: #E8E8E8;
-      --mute: #A8A8A8;
-      --error: #FF8F80;
+    <link
+      rel="canonical"
+      href="https://mohammadaminzaadeh.github.io/logos.html"
+    />
 
-      --r-sm: 10px;
-      --r-md: 16px;
-      --r-lg: 24px;
+    <!-- Open Graph -->
+    <meta property="og:title" content="Logo Design — Mohammad Aminzadeh" />
 
-      --header-h: 76px;
-      --container: 1200px;
-      --gutter: clamp(20px, 5vw, 40px);
-      --section-y: clamp(64px, 9vw, 112px);
-      --ease: cubic-bezier(.2, .7, .2, 1);
+    <meta
+      property="og:description"
+      content="Selected logo design projects by Mohammad Aminzadeh."
+    />
 
-      --font: "Vazirmatn", Tahoma, "Segoe UI", system-ui, sans-serif;
-    }
+    <meta
+      property="og:url"
+      content="https://mohammadaminzaadeh.github.io/logos.html"
+    />
 
-    /* =========================================================
-       RESET / BASE
-       ========================================================= */
-    *, *::before, *::after { box-sizing: border-box; }
-    * { margin: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); -webkit-text-size-adjust: 100%; }
-    body {
-      font-family: var(--font);
-      font-size: 1rem;
-      line-height: 1.95;
-      color: var(--text);
-      background: var(--ink);
-      overflow-x: clip;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-    body.menu-open { overflow: hidden; }
-    img, svg { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    button, input, select, textarea { font: inherit; color: inherit; }
-    ul, ol { list-style: none; padding: 0; }
-    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    /* حروف فارسی نباید letter-spacing بگیرند (اتصال حروف می‌شکند) */
-    h1, h2, h3, h4 { color: var(--white); letter-spacing: 0; text-wrap: balance; }
-    h1 { font-size: clamp(2.15rem, 5.4vw, 4rem); font-weight: 800; line-height: 1.4; }
-    h2 { font-size: clamp(1.65rem, 3.5vw, 2.5rem); font-weight: 700; line-height: 1.55; }
-    h3 { font-size: 1.2rem; font-weight: 700; line-height: 1.6; }
-    p { text-wrap: pretty; }
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    .skip-link {
-      position: absolute; top: -60px; right: 16px; z-index: 100;
-      background: var(--gold); color: var(--ink); padding: 10px 18px; border-radius: var(--r-sm); font-weight: 700;
-    }
-    .skip-link:focus { top: 12px; }
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    .container { width: 100%; max-width: calc(var(--container) + var(--gutter) * 2); margin-inline: auto; padding-inline: var(--gutter); }
-    .section { padding-block: var(--section-y); }
-    .section--alt { background: var(--surface); border-block: 1px solid var(--line); }
-    .section-head { max-width: 640px; margin-bottom: clamp(36px, 5vw, 56px); }
-    .section-head p { color: var(--mute); margin-top: 12px; }
-    .ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+    <style>
+      /* =========================
+       ROOT
+    ========================= */
 
-    /* =========================================================
-       BUTTONS
-       ========================================================= */
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
-      min-height: 50px; padding: 0 1.6rem; border-radius: var(--r-sm);
-      font-weight: 600; font-size: 1rem; line-height: 1; border: 1px solid transparent; cursor: pointer;
-      transition: background-color .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease), transform .15s var(--ease);
-    }
-    .btn:active { transform: translateY(1px); }
-    .btn-primary { background: var(--gold); color: var(--ink); }
-    .btn-primary:hover { background: var(--white); }
-    .btn-ghost { border-color: #4A4A4A; color: var(--white); background: transparent; }
-    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
-    .btn-sm { min-height: 44px; padding: 0 1.2rem; font-size: .95rem; }
-    .btn svg { width: 18px; height: 18px; }
+      :root {
+        --black: #0d0d0d;
+        --gold: #d4af37;
+        --white: #f7f7f4;
+        --text: #d5d5d0;
+        --muted: #9a9a95;
+        --line: rgba(247, 247, 244, 0.12);
+        --max-width: 1180px;
+        --en: "Playfair Display", Georgia, serif;
+        --fa: "Arad", Arial, sans-serif;
+      }
 
-    /* =========================================================
+      /* =========================
+       RESET
+    ========================= */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--black);
+        color: var(--white);
+        font-family: var(--en);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      /* =========================
+       LOCAL FONT
+    ========================= */
+
+      @font-face {
+        font-family: "Playfair Display";
+        src: url("PlayfairDisplay-SemiBold.ttf") format("ttf");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      /* =========================
        HEADER
-       ========================================================= */
-    .site-header {
-      position: sticky; top: 0; z-index: 50; height: var(--header-h);
-      background: var(--ink); border-bottom: 1px solid transparent; transition: border-color .25s;
-    }
-    .site-header.is-scrolled { border-bottom-color: var(--line); }
-    .header-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    /* جای لوگو: برای لوگوی واقعی، محتوای .brand را با <img> عوض کنید */
-    .brand { display: flex; flex-direction: column; line-height: 1.25; flex: none; }
-    .brand-name { font-size: 1.5rem; font-weight: 800; color: var(--white); }
-    .brand-tag { font-size: .75rem; color: var(--mute); font-weight: 500; }
-    .main-nav ul { display: flex; align-items: center; gap: 6px; }
-    .main-nav a { display: block; padding: 8px 14px; border-radius: 8px; color: var(--text); font-size: .95rem; font-weight: 500; transition: color .2s; }
-    .main-nav a:hover { color: var(--gold); }
-    .header-cta { flex: none; }
+    ========================= */
 
-    .menu-toggle {
-      display: none; width: 46px; height: 46px; border: 1px solid var(--line); border-radius: var(--r-sm);
-      background: transparent; cursor: pointer; align-items: center; justify-content: center; flex-direction: column; gap: 5px;
-    }
-    .menu-toggle span { width: 20px; height: 2px; background: var(--white); border-radius: 2px; transition: transform .25s var(--ease), opacity .2s; }
-    .menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-    .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
 
-    .mobile-menu {
-      position: fixed; inset: var(--header-h) 0 0 0; z-index: 40; background: var(--ink);
-      padding: 24px var(--gutter) 40px; display: flex; flex-direction: column; gap: 28px; overflow-y: auto;
-      opacity: 0; visibility: hidden; transform: translateY(-8px);
-      transition: opacity .25s var(--ease), transform .25s var(--ease), visibility 0s linear .25s;
-    }
-    .mobile-menu.is-open { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
-    .mobile-menu a:not(.btn) { display: block; padding: 16px 4px; font-size: 1.25rem; font-weight: 600; color: var(--white); border-bottom: 1px solid var(--line); }
-    .mobile-menu .btn { width: 100%; }
+        background: rgba(13, 13, 13, 0.88);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
 
-    /* =========================================================
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        width: min(var(--max-width), calc(100% - 48px));
+        margin: 0 auto;
+
+        height: 82px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        letter-spacing: 0.02em;
+      }
+
+      .brand span {
+        color: var(--gold);
+      }
+
+      .back-home {
+        font-size: 13px;
+        color: var(--muted);
+        transition: color 0.3s ease;
+      }
+
+      .back-home:hover {
+        color: var(--gold);
+      }
+
+      /* =========================
+       MAIN
+    ========================= */
+
+      main {
+        width: min(var(--max-width), calc(100% - 48px));
+        margin: 0 auto;
+      }
+
+      /* =========================
        HERO
-       ========================================================= */
-    .hero { position: relative; padding-block: clamp(40px, 7vw, 96px) clamp(56px, 8vw, 104px); overflow: hidden; }
-    .staff {
-      position: absolute; inset-inline: 0; top: 18%; height: 72px; pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='72' viewBox='0 0 8 72'%3E%3Cpath d='M0 8h8M0 20h8M0 32h8M0 44h8M0 56h8' stroke='%23D4AF37' stroke-opacity='.18' stroke-width='1'/%3E%3C/svg%3E");
-      background-repeat: repeat-x;
-    }
-    .hero-grid { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 6vw, 72px); align-items: center; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--gold); font-weight: 600; font-size: .95rem; margin-bottom: 20px; }
-    .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--gold); }
-    .hero h1 { margin-bottom: 22px; }
-    .hero-lead { font-size: 1.1rem; color: var(--mute); max-width: 540px; margin-bottom: 32px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 44px; }
-    .hero-stats { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: clamp(20px, 4vw, 44px); padding-top: 28px; border-top: 1px solid var(--line); }
-    .stat-value { display: block; font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 700; color: var(--white); line-height: 1.4; }
-    .stat-label { display: block; font-size: .85rem; color: var(--mute); }
+    ========================= */
 
-    .frame { position: relative; }
-    .frame::after {
-      content: ""; position: absolute; inset: 0; border: 1px solid var(--gold); border-radius: var(--r-lg);
-      transform: translate(-14px, 14px); pointer-events: none;
-    }
-    /* پوشش تصویر: اگر تصویر لود نشد، یک جای‌گزین مرتب نمایش داده می‌شود */
-    .media {
-      position: relative; z-index: 1; overflow: hidden; background-color: var(--surface-2); border-radius: var(--r-lg);
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18V5l12-2v13'/%3E%3Ccircle cx='6' cy='18' r='3'/%3E%3Ccircle cx='18' cy='16' r='3'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-position: center; background-size: 44px;
-    }
-    .media img { width: 100%; height: 100%; object-fit: cover; }
-    .media img.is-broken { display: none; }
-    .hero .media { aspect-ratio: 4 / 5; max-height: 600px; width: 100%; }
+      .hero {
+        min-height: 62vh;
 
-    /* =========================================================
-       TRUST
-       ========================================================= */
-    .trust { border-block: 1px solid var(--line); background: var(--surface); }
-    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-    .trust-item { padding: 30px 24px; border-inline-start: 1px solid var(--line); }
-    .trust-item:first-child { border-inline-start: 0; padding-inline-start: 0; }
-    .trust-item strong { display: block; color: var(--white); font-size: 1.2rem; font-weight: 700; }
-    .trust-item span { color: var(--mute); font-size: .9rem; }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-    /* =========================================================
-       COURSES
-       ========================================================= */
-    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-    .card {
-      background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md);
-      transition: border-color .25s var(--ease), transform .25s var(--ease);
-    }
-    .card:hover { border-color: var(--gold); transform: translateY(-4px); }
-    .course { padding: 28px 24px 24px; display: flex; flex-direction: column; gap: 14px; position: relative; }
-    .course-num { position: absolute; top: 24px; left: 24px; font-size: .9rem; font-weight: 600; color: var(--mute); }
-    .icon-wrap { width: 52px; height: 52px; border: 1px solid var(--gold); border-radius: 50%; display: grid; place-items: center; color: var(--gold); }
-    .icon-wrap svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-    .course p { color: var(--mute); font-size: .95rem; line-height: 1.9; }
-    .course-meta { font-size: .85rem; color: var(--text); padding-top: 12px; border-top: 1px solid var(--line); margin-top: auto; }
-    .course-link { color: var(--gold); font-weight: 600; font-size: .95rem; display: inline-flex; align-items: center; gap: 6px; }
-    .course-link:hover { color: var(--white); }
+        padding: 100px 0 90px;
 
-    /* =========================================================
-       ABOUT
-       ========================================================= */
-    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
-    .about .media { aspect-ratio: 5 / 4; width: 100%; }
-    .about-text p { color: var(--mute); margin-top: 16px; }
-    .points { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 28px; margin-top: 32px; }
-    .point { display: grid; grid-template-columns: 22px 1fr; gap: 12px; }
-    .point svg { width: 22px; height: 22px; margin-top: 5px; stroke: var(--gold); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .point h3 { font-size: 1.02rem; }
-    .point p { margin-top: 2px; font-size: .9rem; line-height: 1.85; }
+        border-bottom: 1px solid var(--line);
+      }
 
-    /* =========================================================
-       WHY US
-       ========================================================= */
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px 36px; }
-    .why-item { padding-top: 24px; border-top: 1px solid var(--line); position: relative; }
-    .why-item::before { content: ""; position: absolute; top: -1px; right: 0; width: 44px; height: 2px; background: var(--gold); }
-    .why-item .icon-wrap { width: 44px; height: 44px; margin-bottom: 16px; }
-    .why-item .icon-wrap svg { width: 22px; height: 22px; }
-    .why-item p { color: var(--mute); font-size: .95rem; margin-top: 6px; }
+      .eyebrow {
+        color: var(--gold);
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
 
-    /* =========================================================
-       TEACHERS
-       ========================================================= */
-    .teacher .media { aspect-ratio: 4 / 5; border-radius: var(--r-md) var(--r-md) 0 0; }
-    .teacher-body { padding: 20px 22px 24px; }
-    .teacher-role { color: var(--gold); font-size: .9rem; font-weight: 600; }
-    .teacher-body p { color: var(--mute); font-size: .92rem; margin-top: 8px; line-height: 1.85; }
-    .teacher { overflow: hidden; }
+        margin-bottom: 24px;
+      }
 
-    /* =========================================================
-       PROCESS
-       ========================================================= */
-    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; counter-reset: step; }
-    .step { position: relative; }
-    .step-num {
-      width: 48px; height: 48px; border: 1px solid var(--gold); border-radius: 50%; display: grid; place-items: center;
-      color: var(--gold); font-weight: 700; font-size: 1.1rem; background: var(--ink); position: relative; z-index: 1; margin-bottom: 18px;
-    }
-    .step:not(:last-child)::after { content: ""; position: absolute; top: 24px; right: 60px; left: -16px; height: 1px; background: var(--line); }
-    .step p { color: var(--mute); font-size: .95rem; margin-top: 6px; }
+      .hero h1 {
+        max-width: 900px;
 
-    /* =========================================================
-       TESTIMONIALS
-       ========================================================= */
-    .quote { padding: 30px 28px; display: flex; flex-direction: column; gap: 18px; }
-    .stars { display: flex; gap: 3px; }
-    .stars svg { width: 18px; height: 18px; }
-    .stars .on { fill: var(--gold); }
-    .stars .off { fill: #3A3A3A; }
-    .quote blockquote { color: var(--text); line-height: 2; flex: 1; }
-    .quote footer { padding-top: 16px; border-top: 1px solid var(--line); }
-    .quote-name { color: var(--white); font-weight: 600; display: block; }
-    .quote-type { color: var(--mute); font-size: .85rem; }
-    .grid-3.cards { gap: 20px; }
+        font-family: "Playfair Display", serif;
+        font-size: clamp(58px, 9vw, 118px);
+        font-weight: 400;
+        line-height: 0.95;
+        letter-spacing: -0.045em;
+      }
 
-    /* =========================================================
-       CTA
-       ========================================================= */
-    .cta-box {
-      position: relative; overflow: hidden; border: 1px solid var(--gold); border-radius: var(--r-lg);
-      padding: clamp(40px, 7vw, 80px) clamp(24px, 6vw, 64px); text-align: center; background-color: var(--surface);
-    }
-    .cta-box .staff { top: 50%; transform: translateY(-50%); }
-    .cta-inner { position: relative; max-width: 620px; margin-inline: auto; }
-    .cta-inner p { color: var(--mute); margin-top: 14px; }
-    .cta-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+      .hero h1 span {
+        color: var(--gold);
+      }
 
-    /* =========================================================
-       CONTACT
-       ========================================================= */
-    .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(32px, 6vw, 72px); align-items: start; }
-    .contact-list { display: grid; gap: 22px; margin-top: 32px; }
-    .contact-item { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: center; }
-    .contact-item .icon-wrap { width: 44px; height: 44px; }
-    .contact-item .icon-wrap svg { width: 20px; height: 20px; }
-    .contact-item small { display: block; color: var(--mute); font-size: .8rem; line-height: 1.6; }
-    .contact-item a, .contact-item span.val { color: var(--white); font-weight: 500; }
-    .contact-item a:hover { color: var(--gold); }
+      .hero-description {
+        max-width: 620px;
 
-    .form-card { padding: clamp(24px, 4vw, 40px); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); }
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .field { display: flex; flex-direction: column; gap: 8px; }
-    .field--full { grid-column: 1 / -1; }
-    .field label { font-size: .92rem; font-weight: 600; color: var(--white); }
-    .field input, .field select, .field textarea {
-      width: 100%; min-height: 50px; padding: 12px 16px; background: var(--ink); border: 1px solid #3A3A3A;
-      border-radius: var(--r-sm); transition: border-color .2s; line-height: 1.6;
-    }
-    .field textarea { min-height: 120px; resize: vertical; }
-    .field select { appearance: none; padding-inline-end: 44px; cursor: pointer;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-position: left 16px center; }
-    .field input::placeholder, .field textarea::placeholder { color: #707070; }
-    .field input:hover, .field select:hover, .field textarea:hover { border-color: #5A5A5A; }
-    .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--gold); }
-    .field [aria-invalid="true"] { border-color: var(--error); }
-    .field-error { color: var(--error); font-size: .85rem; min-height: 1.3em; line-height: 1.5; }
-    .field-error:empty { display: none; }
-    input[type="tel"] { direction: ltr; text-align: right; }
-    .form-actions { margin-top: 24px; display: flex; flex-direction: column; gap: 14px; }
-    .form-actions .btn { width: 100%; }
-    .form-note { color: var(--mute); font-size: .85rem; line-height: 1.85; }
-    .form-status { margin-top: 20px; padding: 16px 18px; border: 1px solid var(--gold); border-radius: var(--r-sm); font-size: .92rem; line-height: 1.9; }
-    .form-status a { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
+        margin-top: 34px;
 
-    /* =========================================================
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.9;
+      }
+
+      /* =========================
+       PROJECTS
+    ========================= */
+
+      .projects {
+        padding: 110px 0 120px;
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
+        margin-bottom: 48px;
+      }
+
+      .section-heading h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 38px;
+        font-weight: 400;
+      }
+
+      .section-number {
+        color: var(--muted);
+        font-size: 12px;
+        letter-spacing: 0.12em;
+      }
+
+      /* =========================
+       PROJECT GRID
+    ========================= */
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+      }
+
+      .project-card {
+        display: block;
+
+        border: 1px solid var(--line);
+        background: #111111;
+
+        overflow: hidden;
+
+        transition:
+          transform 0.4s ease,
+          border-color 0.4s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(212, 175, 55, 0.5);
+      }
+
+      /* =========================
+       PROJECT IMAGE
+    ========================= */
+
+      .project-image {
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+        background: #161616;
+      }
+
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* =========================
+       PROJECT INFO
+    ========================= */
+
+      .project-info {
+        padding: 26px 28px 30px;
+      }
+
+      .project-category {
+        color: var(--gold);
+
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+
+        margin-bottom: 10px;
+      }
+
+      .project-info h3 {
+        font-family: "Playfair Display", serif;
+
+        font-size: 30px;
+        font-weight: 400;
+
+        margin-bottom: 10px;
+      }
+
+      .project-info p {
+        max-width: 500px;
+
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .view-project {
+        display: inline-block;
+
+        margin-top: 22px;
+
+        color: var(--white);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+
+        transition: color 0.3s ease;
+      }
+
+      .project-card:hover .view-project {
+        color: var(--gold);
+      }
+
+      /* =========================
+       FOOTER NAVIGATION
+    ========================= */
+
+      .bottom-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 34px 0;
+
+        border-top: 1px solid var(--line);
+      }
+
+      .bottom-navigation a {
+        color: var(--muted);
+        font-size: 13px;
+
+        transition: color 0.3s ease;
+      }
+
+      .bottom-navigation a:hover {
+        color: var(--gold);
+      }
+
+      /* =========================
        FOOTER
-       ========================================================= */
-    .site-footer { border-top: 1px solid var(--line); padding-top: 64px; background: var(--ink); }
-    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding-bottom: 48px; }
-    .footer-brand p { color: var(--mute); margin-top: 12px; max-width: 340px; font-size: .95rem; }
-    .site-footer h2 { font-size: 1rem; margin-bottom: 16px; }
-    .footer-links { display: grid; gap: 8px; }
-    .footer-links a { color: var(--mute); font-size: .95rem; transition: color .2s; }
-    .footer-links a:hover { color: var(--gold); }
-    .footer-bottom { border-top: 1px solid var(--line); padding-block: 22px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; color: var(--mute); font-size: .85rem; }
+    ========================= */
 
-    /* =========================================================
-       SCROLL REVEAL (فقط وقتی JS فعال است)
-       ========================================================= */
-    .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .5s var(--ease), transform .5s var(--ease); transition-delay: calc(var(--i, 0) * 70ms); }
-    .js .reveal.in { opacity: 1; transform: none; }
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 34px 0 42px;
+      }
 
-    /* =========================================================
+      .footer-inner {
+        width: min(var(--max-width), calc(100% - 48px));
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-name {
+        font-family: "Playfair Display", serif;
+        font-size: 16px;
+      }
+
+      .footer-copy {
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      /* =========================
        RESPONSIVE
-       ========================================================= */
-    @media (max-width: 1080px) {
-      .grid-4 { grid-template-columns: repeat(2, 1fr); }
-      .main-nav a { padding: 8px 10px; }
-    }
-    @media (max-width: 900px) {
-      .main-nav, .header-cta { display: none; }
-      .menu-toggle { display: inline-flex; }
-      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
-      .hero .media { max-height: 460px; aspect-ratio: 4 / 3; }
-      .frame { margin-inline-end: 14px; }
-      .about .media { order: -1; }
-      .trust-grid { grid-template-columns: 1fr 1fr; }
-      .trust-item { padding: 24px 20px; border-top: 1px solid var(--line); }
-      .trust-item:nth-child(-n+2) { border-top: 0; }
-      .trust-item:nth-child(odd) { border-inline-start: 0; padding-inline-start: 0; }
-      .grid-3 { grid-template-columns: 1fr 1fr; gap: 36px 28px; }
-      .steps { grid-template-columns: 1fr; gap: 0; }
-      .step { padding-bottom: 32px; padding-inline-start: 68px; }
-      .step-num { position: absolute; top: 0; right: 0; margin: 0; }
-      .step:not(:last-child)::after { top: 52px; right: 24px; left: auto; width: 1px; height: calc(100% - 56px); }
-      .step:last-child { padding-bottom: 0; }
-      .step { padding-inline-start: 0; padding-inline-end: 68px; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .footer-brand { grid-column: 1 / -1; }
-    }
-    @media (max-width: 600px) {
-      :root { --header-h: 68px; }
-      .grid-4, .grid-3, .points, .form-grid { grid-template-columns: 1fr; }
-      .grid-3 { gap: 32px; }
-      .hero-actions .btn { flex: 1 1 100%; }
-      .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 12px; }
-      .stat-label { font-size: .78rem; }
-      .teacher { display: grid; grid-template-columns: 120px 1fr; }
-      .teacher .media { aspect-ratio: auto; height: 100%; min-height: 170px; border-radius: 0; }
-      .teacher-body { padding: 16px 16px 18px; }
-      .cta-actions .btn { width: 100%; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition-duration: .01ms !important; animation: none !important; }
-      .js .reveal { opacity: 1; transform: none; }
-      .card:hover { transform: none; }
-    }
-  </style>
-</head>
+    ========================= */
 
-<body>
-  <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+      @media (max-width: 750px) {
+        .nav {
+          width: min(var(--max-width), calc(100% - 32px));
+          height: 72px;
+        }
 
-  <!-- =========================================================
+        main {
+          width: min(var(--max-width), calc(100% - 32px));
+        }
+
+        .hero {
+          min-height: 60vh;
+          padding: 80px 0 70px;
+        }
+
+        .hero h1 {
+          font-size: clamp(54px, 17vw, 82px);
+        }
+
+        .hero-description {
+          font-size: 14px;
+          line-height: 1.8;
+        }
+
+        .projects {
+          padding: 80px 0 90px;
+        }
+
+        .section-heading {
+          margin-bottom: 30px;
+        }
+
+        .section-heading h2 {
+          font-size: 30px;
+        }
+
+        .project-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .project-info {
+          padding: 22px 22px 26px;
+        }
+
+        .project-info h3 {
+          font-size: 27px;
+        }
+
+        .footer-inner {
+          width: min(var(--max-width), calc(100% - 32px));
+
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- =========================
        HEADER
-       ========================================================= -->
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="صفحه‌ی اصلی">
-        <!-- برای لوگوی واقعی: این دو span را با <img src="logo.svg" alt="نام برند" height="40"> جایگزین کنید -->
-        <span class="brand-name" data-cfg="brandName"></span>
-        <span class="brand-tag" data-cfg="brandTag"></span>
-      </a>
+  ========================= -->
 
-      <nav class="main-nav" id="main-nav" aria-label="منوی اصلی">
-        <ul>
-          <li><a href="#home">خانه</a></li>
-          <li><a href="#courses">دوره‌ها</a></li>
-          <li><a href="#about">درباره ما</a></li>
-          <li><a href="#teachers">اساتید</a></li>
-          <li><a href="#testimonials">نظرات</a></li>
-          <li><a href="#contact">تماس</a></li>
-        </ul>
+    <header>
+      <nav class="nav">
+        <a href="index.html" class="brand"> Mohammad <span>Aminzadeh</span> </a>
+
+        <a href="index.html#work" class="back-home"> ← Back to Work </a>
       </nav>
+    </header>
 
-      <a class="btn btn-primary btn-sm header-cta" href="#contact">ثبت‌نام و مشاوره</a>
-
-      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="باز کردن منو">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- منوی موبایل: لینک‌ها با JS از منوی دسکتاپ کپی می‌شوند -->
-  <div class="mobile-menu" id="mobile-menu">
-    <nav aria-label="منوی موبایل" id="mobile-nav"></nav>
-    <a class="btn btn-primary" href="#contact">ثبت‌نام و مشاوره</a>
-  </div>
-
-  <main id="main">
-
-    <!-- =========================================================
+    <main>
+      <!-- =========================
          HERO
-         ========================================================= -->
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="staff" aria-hidden="true"></div>
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <p class="eyebrow">آموزش حضوری موسیقی برای همه‌ی سنین</p>
-          <h1 id="hero-title">نوازنده شدن، از یک شروع درست آغاز می‌شود</h1>
-          <p class="hero-lead">کلاس‌های پیانو، گیتار، ویولن و آواز با مدرس‌های متخصص و برنامه‌ای که با سطح و هدف خود شما تنظیم می‌شود؛ از اولین جلسه‌ی مشاوره تا اولین اجرا.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">دریافت مشاوره</a>
-            <a class="btn btn-ghost" href="#courses">مشاهده‌ی دوره‌ها</a>
-          </div>
-          <dl class="hero-stats" id="hero-stats"></dl>
+    ========================= -->
+
+      <section class="hero">
+        <div class="eyebrow">Selected Work</div>
+
+        <h1>Logo Design</h1>
+
+        <p class="hero-description">
+          A selection of minimal and distinctive logo concepts created for
+          brands, digital businesses and creative directions.
+        </p>
+      </section>
+
+      <!-- =========================
+         PROJECTS
+    ========================= -->
+
+      <section class="projects">
+        <div class="section-heading">
+          <h2>Selected Projects</h2>
+
+          <div class="section-number">03 Projects</div>
         </div>
 
-        <div class="frame">
-          <!-- تصویر Hero: آدرس src را عوض کنید. این تصویر eager است (بدون lazy) چون اولین چیزی است که دیده می‌شود -->
-          <div class="media">
-            <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=1000&q=75"
-                 alt="دست‌های یک نوازنده روی کلیدهای پیانو" width="1000" height="1250"
-                 fetchpriority="high" decoding="async" onerror="this.classList.add('is-broken')">
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="project-grid">
+          <!-- SURIN -->
 
-    <!-- =========================================================
-         TRUST / STATISTICS
-         ========================================================= -->
-    <section class="trust" aria-label="چند نکته درباره‌ی نحوه‌ی برگزاری کلاس‌ها">
-      <div class="container">
-        <ul class="trust-grid" id="trust-grid"></ul>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         COURSES
-         ========================================================= -->
-    <section class="section" id="courses" aria-labelledby="courses-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 id="courses-title">دوره‌های آموزشی</h2>
-          <p>برای هر ساز، مسیر مشخصی از مبتدی تا پیشرفته داریم. اگر مطمئن نیستید کدام دوره مناسب شماست، در مشاوره کمکتان می‌کنیم.</p>
-        </div>
-        <div class="grid-4" id="courses-grid"></div>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         ABOUT
-         ========================================================= -->
-    <section class="section section--alt about" id="about" aria-labelledby="about-title">
-      <div class="container about-grid">
-        <div class="frame reveal">
-          <div class="media">
-            <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1000&q=75"
-                 alt="فضای کلاس موسیقی با ساز و تجهیزات" width="1000" height="800"
-                 loading="lazy" decoding="async" onerror="this.classList.add('is-broken')">
-          </div>
-        </div>
-        <div class="about-text reveal">
-          <h2 id="about-title">آموزشی که از شناخت هنرجو شروع می‌شود</h2>
-          <p>هر هنرجو پیش از شروع کلاس‌ها یک جلسه‌ی ارزیابی دارد. مدرس درباره‌ی سابقه، سلیقه و زمانی که برای تمرین دارید با شما صحبت می‌کند و بر همین اساس مسیری روشن و قابل‌اندازه‌گیری می‌چیند.</p>
-          <p>هدف ما این نیست که فقط چند قطعه را حفظ کنید؛ می‌خواهیم نت را بخوانید، گوشتان تربیت شود و بتوانید مستقل تمرین کنید.</p>
-          <ul class="points" id="about-points"></ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         WHY US
-         ========================================================= -->
-    <section class="section" id="why" aria-labelledby="why-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 id="why-title">چرا این آموزشگاه؟</h2>
-          <p>شش اصلی که تصمیم‌های آموزشی ما بر پایه‌ی آن‌ها گرفته می‌شود.</p>
-        </div>
-        <div class="grid-3" id="why-grid"></div>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         TEACHERS
-         ========================================================= -->
-    <section class="section section--alt" id="teachers" aria-labelledby="teachers-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 id="teachers-title">اساتید آموزشگاه</h2>
-          <p>مدرس‌ها هم تجربه‌ی اجرا دارند، هم تجربه‌ی تدریس به گروه‌های سنی مختلف.</p>
-        </div>
-        <div class="grid-4" id="teachers-grid"></div>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         LEARNING PROCESS
-         ========================================================= -->
-    <section class="section" id="process" aria-labelledby="process-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 id="process-title">مسیر یادگیری، در چهار قدم</h2>
-          <p>از اولین تماس تا اولین اجرا، هر مرحله روشن و قابل پیگیری است.</p>
-        </div>
-        <ol class="steps" id="steps"></ol>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         TESTIMONIALS
-         ========================================================= -->
-    <section class="section section--alt" id="testimonials" aria-labelledby="testimonials-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2 id="testimonials-title">تجربه‌ی هنرجوها</h2>
-          <p>چند نظر از والدین و هنرجوهایی که کلاس‌ها را از نزدیک دیده‌اند.</p>
-        </div>
-        <div class="grid-3 cards" id="testimonials-grid"></div>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         CTA
-         ========================================================= -->
-    <section class="section" aria-labelledby="cta-title">
-      <div class="container">
-        <div class="cta-box reveal">
-          <div class="staff" aria-hidden="true"></div>
-          <div class="cta-inner">
-            <h2 id="cta-title">برای شروع، یک گفت‌وگوی کوتاه کافی است</h2>
-            <p>سطح و هدف خود را بگویید تا مناسب‌ترین دوره و مدرس را پیشنهاد بدهیم. این گفت‌وگو شما را به ثبت‌نام متعهد نمی‌کند.</p>
-            <div class="cta-actions">
-              <a class="btn btn-primary" href="#contact">درخواست مشاوره</a>
-              <a class="btn btn-ghost" data-cfg-href="tel" aria-label="تماس تلفنی با آموزشگاه">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-                <span class="ltr" data-cfg="phoneDisplay"></span>
-              </a>
+          <a href="work-surin.html" class="project-card">
+            <div class="project-image">
+              <img
+                src="images/surin-hero.jpg"
+                alt="SURIN logo design"
+                loading="lazy"
+              />
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- =========================================================
-         CONTACT
-         ========================================================= -->
-    <section class="section section--alt" id="contact" aria-labelledby="contact-title">
-      <div class="container contact-grid">
-        <div class="reveal">
-          <h2 id="contact-title">ثبت‌نام و مشاوره</h2>
-          <p style="color:var(--mute);margin-top:12px">فرم را پر کنید تا پیام شما در واتساپ آماده‌ی ارسال شود. اگر ترجیح می‌دهید، مستقیم تماس بگیرید.</p>
-          <ul class="contact-list">
-            <li class="contact-item">
-              <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
-              <div><small>شماره‌ی تماس</small><a class="ltr" data-cfg-href="tel" data-cfg="phoneDisplay"></a></div>
-            </li>
-            <li class="contact-item">
-              <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></span>
-              <div><small>اینستاگرام</small><a class="ltr" data-cfg-href="ig" data-cfg="instagramLabel" target="_blank" rel="noopener noreferrer"></a></div>
-            </li>
-            <li class="contact-item">
-              <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
-              <div><small>آدرس</small><span class="val" data-cfg="address"></span></div>
-            </li>
-            <li class="contact-item">
-              <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-              <div><small>ساعت پاسخ‌گویی</small><span class="val" data-cfg="workingHours"></span></div>
-            </li>
-          </ul>
-        </div>
+            <div class="project-info">
+              <div class="project-category">01 · Logo Design</div>
 
-        <div class="form-card reveal">
-          <form id="contact-form" novalidate aria-describedby="form-note">
-            <div class="form-grid">
-              <div class="field">
-                <label for="f-name">نام و نام خانوادگی</label>
-                <input id="f-name" name="name" type="text" autocomplete="name" placeholder="مثلاً سارا محمدی" required aria-describedby="err-name">
-                <p class="field-error" id="err-name"></p>
-              </div>
-              <div class="field">
-                <label for="f-phone">شماره‌ی موبایل</label>
-                <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="۰۹۱۲۱۲۳۴۵۶۷" required aria-describedby="err-phone">
-                <p class="field-error" id="err-phone"></p>
-              </div>
-              <div class="field field--full">
-                <label for="f-course">دوره‌ی مورد نظر</label>
-                <select id="f-course" name="course" required aria-describedby="err-course"></select>
-                <p class="field-error" id="err-course"></p>
-              </div>
-              <div class="field field--full">
-                <label for="f-message">پیام (اختیاری)</label>
-                <textarea id="f-message" name="message" maxlength="500" placeholder="سن هنرجو، سابقه‌ی قبلی یا هر نکته‌ای که لازم می‌دانید" aria-describedby="err-message"></textarea>
-                <p class="field-error" id="err-message"></p>
-              </div>
+              <h3>SURIN</h3>
+
+              <p>
+                A minimal natural identity concept focused on simplicity,
+                organic forms and a refined visual character.
+              </p>
+
+              <span class="view-project"> View Case Study → </span>
             </div>
-            <div class="form-actions">
-              <button class="btn btn-primary" type="submit">ادامه در واتساپ</button>
-              <p class="form-note" id="form-note">این فرم اطلاعات را روی سرور ذخیره نمی‌کند. پس از تأیید، پیام شما در واتساپ آماده می‌شود و تا زمانی که خودتان آن را ارسال نکنید، ارسال‌شده حساب نمی‌شود.</p>
-            </div>
-            <div class="form-status" id="form-status" role="status" aria-live="polite" hidden></div>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
+          </a>
 
-  <!-- =========================================================
+          <!-- NOVA -->
+
+          <a href="work-nova.html" class="project-card">
+            <div class="project-image">
+              <img
+                src="images/nova-hero.jpg"
+                alt="NOVA logo design"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-info">
+              <div class="project-category">02 · Logo Design</div>
+
+              <h3>NOVA</h3>
+
+              <p>
+                A contemporary technology brand concept designed around clarity,
+                simplicity and digital products.
+              </p>
+
+              <span class="view-project"> View Case Study → </span>
+            </div>
+          </a>
+
+          <!-- PAYDAR -->
+
+          <a href="work-paydar.html" class="project-card">
+            <div class="project-image">
+              <img
+                src="images/paydar-hero.jpg"
+                alt="PAYDAR logo design"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-info">
+              <div class="project-category">03 · Logo Design</div>
+
+              <h3>PAYDAR</h3>
+
+              <p>
+                A geometric identity concept exploring stability, structure and
+                continuity for a real estate direction.
+              </p>
+
+              <span class="view-project"> View Case Study → </span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- =========================
+         BOTTOM NAVIGATION
+    ========================= -->
+
+      <div class="bottom-navigation">
+        <a href="index.html#work"> ← Back to Work </a>
+
+        <a href="index.html"> Home → </a>
+      </div>
+    </main>
+
+    <!-- =========================
        FOOTER
-       ========================================================= -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="brand">
-            <span class="brand-name" data-cfg="brandName"></span>
-            <span class="brand-tag" data-cfg="brandTag"></span>
-          </div>
-          <p>آموزش حضوری پیانو، گیتار، ویولن و آواز برای همه‌ی سنین، با تمرکز بر پیشرفت واقعی هنرجو.</p>
-        </div>
-        <nav aria-label="لینک‌های مهم">
-          <h2>لینک‌های مهم</h2>
-          <ul class="footer-links">
-            <li><a href="#courses">دوره‌ها</a></li>
-            <li><a href="#about">درباره ما</a></li>
-            <li><a href="#teachers">اساتید</a></li>
-            <li><a href="#testimonials">نظرات</a></li>
-            <li><a href="#contact">ثبت‌نام و تماس</a></li>
-          </ul>
-        </nav>
-        <div>
-          <h2>ارتباط با ما</h2>
-          <ul class="footer-links">
-            <li><a class="ltr" data-cfg-href="tel" data-cfg="phoneDisplay"></a></li>
-            <li><a class="ltr" data-cfg-href="ig" data-cfg="instagramLabel" target="_blank" rel="noopener noreferrer"></a></li>
-          </ul>
-        </div>
+  ========================= -->
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-name">Mohammad Aminzadeh</div>
+
+        <div class="footer-copy">© 2026 Mohammad Aminzadeh</div>
       </div>
-      <div class="footer-bottom">
-        <span>© <span id="year"></span> <span data-cfg="brandName"></span>. همه‌ی حقوق محفوظ است.</span>
-        <span id="demo-notice" hidden>این صفحه نمونه‌ی نمایشی است؛ نام‌ها، آمارها، نظرها و اطلاعات تماس فرضی هستند.</span>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    /* =========================================================
-       CONFIG: اطلاعات اصلی مشتری. فقط همین بخش را برای پروژه‌ی بعدی عوض کنید
-       ========================================================= */
-    const CONFIG = {
-      brandName: "آوا",
-      brandTag: "آموزشگاه موسیقی",
-      phone: "09120000000",                 // برای لینک تماس (اعداد انگلیسی)
-      phoneDisplay: "۰۹۱۲ ۰۰۰ ۰۰۰۰",        // نمایش در سایت
-      whatsapp: "989120000000",             // بدون + و بدون صفر ابتدایی، با کد کشور
-      instagram: "your_school",             // فقط نام کاربری، بدون @
-      email: "info@example.com",
-      address: "تهران، خیابان نمونه، پلاک ۱۰ (آدرس نمونه)",
-      workingHours: "همه‌ی روزها به‌جز جمعه، ۹ تا ۲۰",
-      demoNotice: true                      // برای مشتری واقعی false کنید
-    };
-
-    /* =========================================================
-       DATA: محتوای قابل تغییر (همه‌ی مقدارها نمونه‌اند)
-       ========================================================= */
-
-    // آمار Hero (نمونه؛ با اعداد واقعی مشتری جایگزین شود)
-    const STATS = [
-      { value: "+۳۰۰", label: "هنرجوی فعال" },
-      { value: "۱۲ سال", label: "سابقه‌ی آموزش" },
-      { value: "۸ نفر", label: "مدرس" }
-    ];
-
-    // نوار اعتماد (اطلاعات عملیاتی کلاس‌ها؛ با شرایط واقعی مشتری جایگزین شود)
-    const TRUST = [
-      { value: "حداکثر ۶ نفر", label: "ظرفیت کلاس‌های گروهی" },
-      { value: "۴۵ دقیقه", label: "مدت هر جلسه" },
-      { value: "جلسه‌ی ارزیابی", label: "پیش از شروع کلاس‌ها" },
-      { value: "همه‌ی سنین", label: "از کودک تا بزرگسال" }
-    ];
-
-    // آیکون‌ها (SVG ساده، بدون فایل جدا)
-    const ICONS = {
-      piano: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 19v-5M12 19v-5M16 19v-5M7 5v6M11 5v6M15 5v6M19 5v6" opacity="0"/><path d="M8.5 5v8M12 5v8M15.5 5v8"/>',
-      guitar: '<circle cx="8.5" cy="15.5" r="5"/><circle cx="8.5" cy="15.5" r="1.3"/><path d="M12.2 11.8 20 4M17.5 3.5l3 3"/>',
-      violin: '<path d="M9 7.5c0 2-2 2.2-2 4.5s2 2.5 2 4.5a3 3 0 0 0 6 0c0-2 2-2.2 2-4.5s-2-2.5-2-4.5a3 3 0 0 0-6 0z"/><path d="M12 2v5M10 12h4"/>',
-      voice: '<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/>',
-      target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
-      award: '<circle cx="12" cy="9" r="6"/><path d="m8.5 14.2-1.5 7 5-3 5 3-1.5-7"/>',
-      plan: '<rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 2v4M16 2v4M4 10h16M8 15h4"/>',
-      room: '<path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M10 21v-6h4v6"/>',
-      chat: '<path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.2-4.6A8 8 0 1 1 21 12z"/>',
-      growth: '<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>'
-    };
-
-    // دوره‌ها
-    const COURSES = [
-      { title: "پیانو", icon: "piano", text: "از آشنایی با نت‌خوانی و تکنیک دست تا اجرای قطعه‌های کلاسیک و مدرن.", meta: "کودک، نوجوان و بزرگسال" },
-      { title: "گیتار", icon: "guitar", text: "گیتار آکوستیک و کلاسیک؛ از آکوردهای پایه تا نوازندگی مستقل و همراهی آواز.", meta: "نوجوان و بزرگسال" },
-      { title: "ویولن", icon: "violin", text: "پایه‌گذاری درست وضعیت بدن و آرشه‌کشی، همراه با نت‌خوانی و گوش‌ورزی.", meta: "کودک تا بزرگسال" },
-      { title: "آواز", icon: "voice", text: "تنفس، کنترل صدا و گوش‌ورزی، با تمرین قطعه‌های مورد علاقه‌ی هنرجو.", meta: "نوجوان و بزرگسال" }
-    ];
-
-    // نکات بخش درباره‌ی ما
-    const ABOUT_POINTS = [
-      { title: "آموزش اصولی", text: "نت‌خوانی، تکنیک و گوش‌ورزی از همان ابتدا کنار هم پیش می‌روند." },
-      { title: "اساتید متخصص", text: "مدرس‌ها هم تجربه‌ی اجرا دارند، هم تجربه‌ی تدریس." },
-      { title: "برنامه‌ی شخصی", text: "برنامه‌ی تمرین با سطح، هدف و زمان هر هنرجو تنظیم می‌شود." },
-      { title: "محیط حرفه‌ای", text: "کلاس‌های آرام و مجهز، با سازهای سرویس‌شده." }
-    ];
-
-    // چرا ما
-    const WHY = [
-      { icon: "target", title: "آموزش متناسب با سطح", text: "کلاس‌ها بر اساس سطح واقعی هنرجو برگزار می‌شود، نه یک برنامه‌ی ثابت برای همه." },
-      { icon: "award", title: "اساتید باتجربه", text: "مدرس‌ها پیش از شروع همکاری، هم از نظر اجرا و هم از نظر روش تدریس بررسی می‌شوند." },
-      { icon: "plan", title: "برنامه‌ی آموزشی مشخص", text: "هر ترم هدف، سرفصل و معیار پیشرفت روشنی دارد و می‌دانید در چه مسیری هستید." },
-      { icon: "room", title: "محیط حرفه‌ای", text: "فضایی آرام برای تمرکز، با ساز و تجهیزات مناسب هر کلاس." },
-      { icon: "chat", title: "پشتیبانی", text: "برای زمان‌بندی، جبران جلسه و سؤال‌های آموزشی یک مسیر ارتباطی مشخص دارید." },
-      { icon: "growth", title: "تمرکز بر پیشرفت واقعی", text: "به‌جای شمردن جلسه‌ها، پیشرفت را با اجرای کوتاه و بازخورد منظم می‌سنجیم." }
-    ];
-
-    // اساتید (نام و تصویر نمونه؛ برای تغییر: name, role, text, image, alt)
-    const TEACHERS = [
-      { name: "مهسا رادمنش", role: "مدرس پیانو", text: "تمرکز بر نت‌خوانی، تکنیک و اجرای قطعه‌های کلاسیک برای کودکان و بزرگسالان.",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=75", alt: "تصویر نمونه‌ی مدرس پیانو" },
-      { name: "کامیار صادقی", role: "مدرس گیتار", text: "گیتار آکوستیک و کلاسیک؛ مسیر روشن از آکورد تا نوازندگی مستقل.",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=75", alt: "تصویر نمونه‌ی مدرس گیتار" },
-      { name: "النا فرزین", role: "مدرس ویولن", text: "تثبیت وضعیت بدن و آرشه‌کشی، با تمرین‌های کوتاه و منظم.",
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=75", alt: "تصویر نمونه‌ی مدرس ویولن" },
-      { name: "پویا طاهری", role: "مدرس آواز", text: "تنفس، کنترل صدا و گوش‌ورزی، متناسب با سبک مورد علاقه‌ی هنرجو.",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=75", alt: "تصویر نمونه‌ی مدرس آواز" }
-    ];
-
-    // مراحل یادگیری
-    const PROCESS = [
-      { title: "مشاوره", text: "با هم درباره‌ی هدف، سابقه و زمان آزاد شما صحبت می‌کنیم." },
-      { title: "انتخاب دوره", text: "ساز، مدرس و ساعت کلاس را متناسب با شما پیشنهاد می‌دهیم." },
-      { title: "شروع آموزش", text: "کلاس‌ها با برنامه‌ی مشخص و تمرین‌های کوتاه هفتگی آغاز می‌شود." },
-      { title: "پیشرفت و اجرا", text: "با بازخورد منظم پیش می‌روید و در پایان دوره یک قطعه را اجرا می‌کنید." }
-    ];
-
-    // نظرات (نمونه؛ rating بین ۱ تا ۵)
-    const TESTIMONIALS = [
-      { text: "پسرم از کلاس اول بدون استرس شروع کرد. مدرس صبور بود و تمرین‌ها را هر هفته ساده و مشخص تنظیم می‌کرد.", name: "نیلوفر ع.", type: "مادر هنرجوی پیانو", rating: 5 },
-      { text: "بعد از سال‌ها دوباره سراغ گیتار آمدم. برنامه‌ی کلاس با ساعت کاری من هماهنگ شد و پیشرفتم را واقعاً حس می‌کنم.", name: "امیرحسین ک.", type: "هنرجوی بزرگسال گیتار", rating: 5 },
-      { text: "فضای کلاس آرام است و بازخوردها دقیق. برای اولین اجرای کوچکم خیلی کمک کرد.", name: "سمیرا ر.", type: "هنرجوی آواز", rating: 4 }
-    ];
-
-    /* =========================================================
-       HELPERS
-       ========================================================= */
-    const $ = (s, el = document) => el.querySelector(s);
-    const $$ = (s, el = document) => [...el.querySelectorAll(s)];
-    const faDigits = "۰۱۲۳۴۵۶۷۸۹";
-    const toFa = n => String(n).replace(/\d/g, d => faDigits[d]);
-    const toEn = s => s
-      .replace(/[۰-۹]/g, d => faDigits.indexOf(d))
-      .replace(/[٠-٩]/g, d => "٠١٢٣٤٥٦٧٨٩".indexOf(d));
-    const icon = name => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[name]}</svg>`;
-    const IMG_ERR = "this.classList.add('is-broken')";
-
-    /* =========================================================
-       CONFIG BINDING
-       ========================================================= */
-    function bindConfig() {
-      const links = {
-        tel: `tel:${CONFIG.phone}`,
-        ig: `https://instagram.com/${CONFIG.instagram}`,
-        wa: `https://wa.me/${CONFIG.whatsapp}`,
-        mail: `mailto:${CONFIG.email}`
-      };
-      const values = { ...CONFIG, instagramLabel: "@" + CONFIG.instagram };
-      $$("[data-cfg]").forEach(el => { el.textContent = values[el.dataset.cfg]; });
-      $$("[data-cfg-href]").forEach(el => { el.href = links[el.dataset.cfgHref]; });
-      $("#year").textContent = new Intl.DateTimeFormat("fa-IR", { year: "numeric" }).format(new Date());
-      $("#demo-notice").hidden = !CONFIG.demoNotice;
-    }
-
-    /* =========================================================
-       RENDER SECTIONS
-       ========================================================= */
-    function renderAll() {
-      $("#hero-stats").innerHTML = STATS.map(s =>
-        `<div><dt class="stat-label">${s.label}</dt><dd class="stat-value">${s.value}</dd></div>`
-      ).join("");
-
-      $("#trust-grid").innerHTML = TRUST.map(t =>
-        `<li class="trust-item"><strong>${t.value}</strong><span>${t.label}</span></li>`
-      ).join("");
-
-      $("#courses-grid").innerHTML = COURSES.map((c, i) => `
-        <article class="card course reveal" style="--i:${i}">
-          <span class="course-num" aria-hidden="true">${toFa(String(i + 1).padStart(2, "0"))}</span>
-          <span class="icon-wrap">${icon(c.icon)}</span>
-          <h3>${c.title}</h3>
-          <p>${c.text}</p>
-          <p class="course-meta">${c.meta}</p>
-          <a class="course-link" href="#contact" data-course="${c.title}" aria-label="مشاوره برای دوره‌ی ${c.title}">مشاوره‌ی این دوره ‹</a>
-        </article>`).join("");
-
-      const check = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>';
-      $("#about-points").innerHTML = ABOUT_POINTS.map(p =>
-        `<li class="point">${check}<div><h3>${p.title}</h3><p>${p.text}</p></div></li>`
-      ).join("");
-
-      $("#why-grid").innerHTML = WHY.map((w, i) => `
-        <article class="why-item reveal" style="--i:${i % 3}">
-          <span class="icon-wrap">${icon(w.icon)}</span>
-          <h3>${w.title}</h3>
-          <p>${w.text}</p>
-        </article>`).join("");
-
-      $("#teachers-grid").innerHTML = TEACHERS.map((t, i) => `
-        <article class="card teacher reveal" style="--i:${i}">
-          <div class="media"><img src="${t.image}" alt="${t.alt}" width="600" height="750" loading="lazy" decoding="async" onerror="${IMG_ERR}"></div>
-          <div class="teacher-body">
-            <h3>${t.name}</h3>
-            <span class="teacher-role">${t.role}</span>
-            <p>${t.text}</p>
-          </div>
-        </article>`).join("");
-
-      $("#steps").innerHTML = PROCESS.map((s, i) => `
-        <li class="step reveal" style="--i:${i}">
-          <span class="step-num" aria-hidden="true">${toFa(i + 1)}</span>
-          <h3>${s.title}</h3>
-          <p>${s.text}</p>
-        </li>`).join("");
-
-      const star = on => `<svg viewBox="0 0 24 24" class="${on ? "on" : "off"}"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>`;
-      $("#testimonials-grid").innerHTML = TESTIMONIALS.map((q, i) => `
-        <article class="card quote reveal" style="--i:${i}">
-          <div class="stars" role="img" aria-label="امتیاز ${toFa(q.rating)} از ${toFa(5)}">${[1, 2, 3, 4, 5].map(n => star(n <= q.rating)).join("")}</div>
-          <blockquote>«${q.text}»</blockquote>
-          <footer><span class="quote-name">${q.name}</span><span class="quote-type">${q.type}</span></footer>
-        </article>`).join("");
-
-      $("#f-course").innerHTML =
-        `<option value="" disabled selected>انتخاب کنید</option>` +
-        COURSES.map(c => `<option value="${c.title}">${c.title}</option>`).join("") +
-        `<option value="مشاوره برای انتخاب دوره">هنوز مطمئن نیستم، مشاوره می‌خواهم</option>`;
-    }
-
-    /* =========================================================
-       HEADER / MOBILE MENU
-       ========================================================= */
-    function initHeader() {
-      const header = $("#site-header");
-      const toggle = $("#menu-toggle");
-      const menu = $("#mobile-menu");
-      const mobileNav = $("#mobile-nav");
-
-      // لینک‌های منوی موبایل از منوی دسکتاپ کپی می‌شوند (تا فقط یک منبع داشته باشیم)
-      $$("#main-nav a").forEach(a => mobileNav.appendChild(a.cloneNode(true)));
-
-      const setOpen = open => {
-        menu.classList.toggle("is-open", open);
-        toggle.setAttribute("aria-expanded", String(open));
-        toggle.setAttribute("aria-label", open ? "بستن منو" : "باز کردن منو");
-        document.body.classList.toggle("menu-open", open);
-      };
-
-      toggle.addEventListener("click", () => setOpen(toggle.getAttribute("aria-expanded") !== "true"));
-      menu.addEventListener("click", e => { if (e.target.closest("a")) setOpen(false); });
-      document.addEventListener("keydown", e => {
-        if (e.key === "Escape" && menu.classList.contains("is-open")) { setOpen(false); toggle.focus(); }
-      });
-      window.matchMedia("(min-width: 901px)").addEventListener("change", e => { if (e.matches) setOpen(false); });
-
-      const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
-      onScroll();
-      window.addEventListener("scroll", onScroll, { passive: true });
-    }
-
-    /* =========================================================
-       SCROLL REVEAL
-       ========================================================= */
-    function initReveal() {
-      const items = $$(".reveal");
-      if (!("IntersectionObserver" in window)) { items.forEach(el => el.classList.add("in")); return; }
-      const io = new IntersectionObserver(entries => {
-        entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
-      }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-      items.forEach(el => io.observe(el));
-    }
-
-    /* =========================================================
-       CONTACT FORM
-       ========================================================= */
-    function initForm() {
-      const form = $("#contact-form");
-      const status = $("#form-status");
-      const fields = {
-        name: $("#f-name"), phone: $("#f-phone"), course: $("#f-course"), message: $("#f-message")
-      };
-
-      // دکمه‌ی «مشاوره‌ی این دوره» در کارت‌ها، دوره را در فرم انتخاب می‌کند
-      document.addEventListener("click", e => {
-        const link = e.target.closest("[data-course]");
-        if (link) { fields.course.value = link.dataset.course; clearError("course"); }
-      });
-
-      function normalizePhone(raw) {
-        let p = toEn(raw).replace(/[\s\-()]/g, "");
-        if (p.startsWith("+98")) p = "0" + p.slice(3);
-        else if (p.startsWith("0098")) p = "0" + p.slice(4);
-        else if (/^98\d{10}$/.test(p)) p = "0" + p.slice(2);
-        return p;
-      }
-
-      function setError(key, msg) {
-        const el = fields[key];
-        $("#err-" + key).textContent = msg;
-        el.setAttribute("aria-invalid", "true");
-      }
-      function clearError(key) {
-        $("#err-" + key).textContent = "";
-        fields[key].removeAttribute("aria-invalid");
-      }
-
-      function validate() {
-        Object.keys(fields).forEach(clearError);
-        const errors = [];
-        const name = fields.name.value.trim();
-        const phone = normalizePhone(fields.phone.value);
-        if (name.length < 2) errors.push(["name", "لطفاً نام خود را وارد کنید."]);
-        if (!/^09\d{9}$/.test(phone)) errors.push(["phone", "شماره‌ی موبایل باید با ۰۹ شروع شود و ۱۱ رقم باشد."]);
-        if (!fields.course.value) errors.push(["course", "لطفاً یک دوره انتخاب کنید."]);
-        if (fields.message.value.length > 500) errors.push(["message", "پیام نباید بیشتر از ۵۰۰ نویسه باشد."]);
-        errors.forEach(([k, m]) => setError(k, m));
-        if (errors.length) fields[errors[0][0]].focus();
-        return { ok: !errors.length, name, phone };
-      }
-
-      Object.keys(fields).forEach(k => {
-        fields[k].addEventListener("input", () => clearError(k));
-        fields[k].addEventListener("change", () => clearError(k));
-      });
-
-      form.addEventListener("submit", e => {
-        e.preventDefault();
-        status.hidden = true;
-        const { ok, name, phone } = validate();
-        if (!ok) return;
-
-        const msg = fields.message.value.trim();
-        const text = [
-          `سلام، من ${name} هستم و برای ${fields.course.value} درخواست مشاوره دارم.`,
-          `شماره‌ی تماس: ${toFa(phone)}`,
-          msg ? `توضیحات: ${msg}` : ""
-        ].filter(Boolean).join("\n");
-        const url = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`;
-
-        const win = window.open(url, "_blank", "noopener");
-        status.innerHTML = win
-          ? `واتساپ باز شد و پیام شما آماده است. <strong>پیام تا زمانی که در واتساپ ارسال نکنید، به ما نمی‌رسد.</strong>`
-          : `مرورگر باز شدن واتساپ را مسدود کرد. <a href="${url}" target="_blank" rel="noopener noreferrer">برای ادامه در واتساپ اینجا بزنید</a>؛ پیام تا زمانی که ارسال نکنید، به ما نمی‌رسد.`;
-        status.hidden = false;
-      });
-    }
-
-    /* =========================================================
-       INIT
-       ========================================================= */
-    bindConfig();
-    renderAll();
-    bindConfig();   // بار دوم: برای عنصرهایی که renderAll ساخته است
-    initHeader();
-    initReveal();
-    initForm();
-  </script>
-</body>
+    </footer>
+  </body>
 </html>
